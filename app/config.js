@@ -1,11 +1,9 @@
 // ============================================================================
-//  Configuração do Supabase.
-//  Preencha com os dados do SEU projeto: Supabase → Project Settings → API.
-//  - SUPABASE_URL  = "Project URL"
-//  - SUPABASE_ANON_KEY = a chave "anon public" (pode ficar no site, é protegida
-//    pelas regras de segurança do banco; NUNCA coloque aqui a "service_role").
+//  Configuração do Supabase (projeto "superpack").
+//  SUPABASE_ANON_KEY usa a "Publishable key" (segura para ficar no site,
+//  protegida pelas regras de segurança/RLS do banco).
 // ============================================================================
 window.CONFIG = {
-  SUPABASE_URL: "COLE_AQUI_A_PROJECT_URL",
-  SUPABASE_ANON_KEY: "COLE_AQUI_A_ANON_PUBLIC_KEY",
+  SUPABASE_URL: "https://ylosgquyptcrktqxdybm.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_W4ymJUgzFJQyNhgseuEE7w_2eEgPJ26",
 };
