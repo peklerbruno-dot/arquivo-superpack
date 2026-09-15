@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SuperPack — Chazit</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Tela de login (aparece quando deslogado) -->
+<div id="auth" class="authwrap hidden">
+  <div class="authcard">
+    <h1>SuperPack</h1>
+    <p class="sub">Acervo de peulot e Machberet Kvutzá — acesso dos madrichim</p>
+    <div class="authtabs">
+      <button id="tab-login" class="active">Entrar</button>
+      <button id="tab-signup">Criar conta</button>
+    </div>
+    <div class="field-row" id="nome-row" style="display:none">
+      <label class="lbl">Seu nome</label>
+      <input id="a-nome" type="text" placeholder="Nome do madrich(á)">
+    </div>
+    <div class="field-row">
+      <label class="lbl">E-mail</label>
+      <input id="a-email" type="email" placeholder="voce@exemplo.com" autocomplete="email">
+    </div>
+    <div class="field-row">
+      <label class="lbl">Senha</label>
+      <input id="a-senha" type="password" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <div id="a-msg"></div>
+    <button class="btn" id="a-submit" style="width:100%">Entrar</button>
+  </div>
+</div>
+
+<!-- App (aparece quando logado) -->
+<div id="app" class="hidden">
+  <div class="topbar">
+    <div class="row">
+      <span class="brand">SuperPack</span>
+      <nav class="nav" id="nav">
+        <button data-view="acervo" class="active">Acervo</button>
+        <button data-view="nova">Nova peulá</button>
+        <button data-view="materiais">Materiais</button>
+        <button data-view="machberet">Machberet</button>
+      </nav>
+      <span class="spacer"></span>
+      <span class="userbox"><span class="who" id="who"></span><button id="logout">Sair</button></span>
+    </div>
+  </div>
+  <main id="main"></main>
+</div>
+
+<!-- Modal genérico -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close" id="m-close" aria-label="Fechar">×</button>
+    <div class="mhead"><h2 id="m-title"></h2><div class="hmeta" id="m-meta"></div></div>
+    <div class="mbody" id="m-body"></div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="js/vendor/supabase.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,4 +1,32 @@
-# Arquivo do SuperPack Chazit SP
+# SuperPack Chazit SP — arquivo + versão nova
+
+Este repositório tem **duas coisas**:
+
+1. **O arquivo** do site antigo `http://www.chazit.org.br/superpack/novo/` (espelho
+   + as 1287 peulot recuperadas) — a matéria-prima.
+2. **A versão nova, gratuita** do SuperPack, em **`app/`** — com login dos
+   madrichim, acervo pesquisável, cadastro de novas peulot, materiais de apoio e
+   a **Machberet Kvutzá** (caderno por kvutzá, por ano).
+
+## 🚀 Colocar a versão nova no ar
+
+Siga o **[`SETUP.md`](SETUP.md)** — passo a passo, sem precisar programar
+(criar projeto no Supabase, colar o `schema.sql`, importar o acervo, publicar).
+
+```
+app/                → o site novo (login + acervo + machberet + materiais)
+  index.html        → app (página única)
+  config.js         → suas chaves do Supabase (preencher)
+  css/ , js/        → estilo e lógica (supabase-js já incluído em js/vendor/)
+supabase/
+  schema.sql        → cria banco, regras de segurança e storage (colar no Supabase)
+  importar_acervo.py→ carrega as 1287 peulot no banco
+SETUP.md            → guia de instalação
+```
+
+---
+
+## O arquivo do site antigo (referência)
 
 Cópia (espelho) completa do site **http://www.chazit.org.br/superpack/novo/** e
 das seções relacionadas do `chazit.org.br`, baixada para servir de base a uma
