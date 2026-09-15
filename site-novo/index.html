@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acervo de Peulot — SuperPack</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1c2430; --muted:#5b6673;
+    --line:#e6e9ee; --brand:#e8590c; --brand-2:#f08c00; --brand-soft:#fff4e6;
+    --chip:#eef1f5; --chip-on:#e8590c; --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0f1520; --card:#161d2b; --ink:#e8edf4; --muted:#9aa6b6;
+      --line:#232c3c; --brand:#ff8a4c; --brand-2:#ffa94d; --brand-soft:#26221c;
+      --chip:#1e2736; --chip-on:#ff8a4c; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--brand)}
+  /* Header */
+  header{
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    color:#fff; padding:calc(28px + env(safe-area-inset-top,0px)) 20px 26px;
+  }
+  .wrap{max-width:1080px; margin:0 auto}
+  header h1{margin:0 0 4px; font-size:26px; letter-spacing:-.02em}
+  header p{margin:0; opacity:.92; font-size:14px}
+  /* Controls */
+  .controls{
+    position:sticky; top:0; z-index:20; background:var(--bg);
+    border-bottom:1px solid var(--line); padding:14px 20px;
+    padding-top:calc(14px + env(safe-area-inset-top,0px));
+  }
+  .controls.stuck{box-shadow:var(--shadow)}
+  .searchrow{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .search{
+    flex:1 1 260px; display:flex; align-items:center; gap:8px; background:var(--card);
+    border:1px solid var(--line); border-radius:12px; padding:10px 12px; box-shadow:var(--shadow);
+  }
+  .search input{border:0; outline:0; background:transparent; color:var(--ink); font-size:16px; width:100%}
+  .search svg{flex:none; opacity:.5}
+  select{
+    background:var(--card); color:var(--ink); border:1px solid var(--line);
+    border-radius:12px; padding:10px 12px; font-size:15px; box-shadow:var(--shadow);
+  }
+  .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+  .chip{
+    border:1px solid var(--line); background:var(--chip); color:var(--ink);
+    padding:6px 12px; border-radius:999px; font-size:13px; cursor:pointer; user-select:none;
+    transition:.15s;
+  }
+  .chip:hover{border-color:var(--brand)}
+  .chip[aria-pressed="true"]{background:var(--chip-on); color:#fff; border-color:transparent}
+  .count{color:var(--muted); font-size:13px; margin-top:12px}
+  /* Grid */
+  main{max-width:1080px; margin:0 auto; padding:18px 20px 60px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:16px; box-shadow:var(--shadow); cursor:pointer; display:flex; flex-direction:column;
+    gap:10px; transition:transform .12s, border-color .12s;
+  }
+  .card:hover{transform:translateY(-2px); border-color:var(--brand)}
+  .card .tema{font-weight:650; font-size:16px; letter-spacing:-.01em}
+  .card .meta{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:auto}
+  .tag{font-size:11.5px; padding:3px 9px; border-radius:999px; background:var(--brand-soft); color:var(--brand); font-weight:600}
+  .year{font-size:12px; color:var(--muted)}
+  .snippet{color:var(--muted); font-size:13.5px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+  .more{display:block; margin:26px auto 0; padding:11px 20px; border-radius:12px; border:1px solid var(--line);
+    background:var(--card); color:var(--ink); font-size:15px; cursor:pointer; box-shadow:var(--shadow)}
+  .empty{text-align:center; color:var(--muted); padding:60px 20px}
+  mark{background:#ffe08a; color:inherit; padding:0 1px; border-radius:2px}
+  /* Modal */
+  .overlay{position:fixed; inset:0; background:rgba(10,15,25,.55); display:none; z-index:50;
+    padding:20px; overflow:auto; backdrop-filter:blur(2px)}
+  .overlay.open{display:block}
+  .modal{max-width:760px; margin:24px auto; background:var(--card); border-radius:18px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35); overflow:hidden}
+  .modal header{background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:22px 24px}
+  .modal header h2{margin:0; color:#fff; font-size:20px}
+  .modal .hmeta{margin-top:8px; display:flex; gap:8px; flex-wrap:wrap}
+  .modal .hmeta .tag{background:rgba(255,255,255,.22); color:#fff}
+  .modal .hmeta .year{color:rgba(255,255,255,.9)}
+  .body{padding:8px 24px 26px}
+  .field{padding:16px 0; border-bottom:1px solid var(--line)}
+  .field:last-child{border-bottom:0}
+  .field h3{margin:0 0 6px; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--brand)}
+  .field .val{white-space:pre-wrap; font-size:15px}
+  .field .val.empty-val{color:var(--muted); font-style:italic}
+  .close{position:absolute; top:16px; right:18px; background:rgba(255,255,255,.2); border:0; color:#fff;
+    width:34px; height:34px; border-radius:50%; font-size:20px; cursor:pointer; line-height:1}
+  .idtag{color:rgba(255,255,255,.75); font-size:12px; margin-top:6px}
+  footer{max-width:1080px; margin:0 auto; padding:0 20px 40px; color:var(--muted); font-size:13px; text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Acervo de Peulot</h1>
+    <p>Banco de atividades educativas — versão nova do Armário da Tik</p>
+  </div>
+</header>
+
+<div class="controls" id="controls">
+  <div class="wrap">
+    <div class="searchrow">
+      <label class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Buscar por tema, objetivo, conteúdo…" autocomplete="off">
+      </label>
+      <select id="ano"><option value="">Todos os anos</option></select>
+      <select id="ordem">
+        <option value="recentes">Mais recentes</option>
+        <option value="antigos">Mais antigos</option>
+        <option value="az">Tema A→Z</option>
+      </select>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="count" id="count">Carregando…</div>
+  </div>
+</div>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <button class="more" id="more" hidden>Mostrar mais</button>
+  <div class="empty" id="empty" hidden>Nenhuma peulá encontrada com esses filtros.</div>
+</main>
+
+<footer>
+  Acervo recuperado do SuperPack Chazit SP · <span id="total">0</span> peulot.
+  Reconstruído como site estático e gratuito.
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" style="position:relative">
+    <button class="close" id="close" aria-label="Fechar">×</button>
+    <header>
+      <h2 id="m-tema"></h2>
+      <div class="hmeta" id="m-meta"></div>
+      <div class="idtag" id="m-id"></div>
+    </header>
+    <div class="body" id="m-body"></div>
+  </div>
+</div>
+
+<script>
+const NOMES = {israel:"Israel", doc:"Documentos/Textos", judaismo:"Judaísmo",
+  sionismo:"Sionismo", shoa:"Shoá", manhigut:"Manhigut", mej:"MEJ", ceh:"CEH"};
+const PAGE = 60;
+let DADOS = [], view = [], shown = 0;
+let activeCats = new Set(), q = "", ano = "", ordem = "recentes";
+
+const $ = s => document.querySelector(s);
+const esc = s => (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function highlight(text, terms){
+  let t = esc(text);
+  terms.forEach(w=>{ if(w.length<2) return;
+    t = t.replace(new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+")","gi"),"<mark>$1</mark>"); });
+  return t;
+}
+function norm(s){ return (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
+
+function applyFilters(){
+  const terms = q.trim().split(/\s+/).filter(Boolean);
+  const nq = terms.map(norm);
+  view = DADOS.filter(p=>{
+    if(ano && String(p.shnat)!==ano) return false;
+    if(activeCats.size){ if(!p.categorias.some(c=>activeCats.has(c))) return false; }
+    if(nq.length){
+      const blob = norm([p.tema,p.objetivo,p.desenvolvimento,p.sicha,p.parte_tecnica].join(" "));
+      if(!nq.every(w=>blob.includes(w))) return false;
+    }
+    return true;
+  });
+  if(ordem==="recentes") view.sort((a,b)=>(b.shnat||0)-(a.shnat||0)||b.id-a.id);
+  else if(ordem==="antigos") view.sort((a,b)=>(a.shnat||9999)-(b.shnat||9999)||a.id-b.id);
+  else view.sort((a,b)=>norm(a.tema).localeCompare(norm(b.tema)));
+  shown = 0;
+  $("#grid").innerHTML = "";
+  render();
+  $("#count").textContent = view.length + (view.length===1?" peulá":" peulot");
+  $("#empty").hidden = view.length>0;
+}
+
+function render(){
+  const terms = q.trim().split(/\s+/).filter(w=>w.length>1);
+  const frag = document.createDocumentFragment();
+  const next = view.slice(shown, shown+PAGE);
+  next.forEach(p=>{
+    const el = document.createElement("div");
+    el.className = "card"; el.tabIndex = 0;
+    const tags = p.categorias.map(c=>`<span class="tag">${esc(NOMES[c]||c)}</span>`).join("");
+    const snip = p.objetivo || p.desenvolvimento || "";
+    el.innerHTML = `<div class="tema">${highlight(p.tema,terms)}</div>
+      <div class="snippet">${highlight(snip.slice(0,240),terms)}</div>
+      <div class="meta">${tags}<span class="year">${p.shnat?("shnat "+p.shnat):""}</span></div>`;
+    el.onclick = ()=>openModal(p);
+    el.onkeydown = e=>{ if(e.key==="Enter") openModal(p); };
+    frag.appendChild(el);
+  });
+  $("#grid").appendChild(frag);
+  shown += next.length;
+  $("#more").hidden = shown>=view.length;
+}
+
+function openModal(p){
+  $("#m-tema").textContent = p.tema || "(sem tema)";
+  $("#m-id").textContent = "id "+p.id;
+  const tags = p.categorias.map(c=>`<span class="tag">${esc(NOMES[c]||c)}</span>`).join("");
+  $("#m-meta").innerHTML = tags + (p.shnat?`<span class="year">shnat ${p.shnat}</span>`:"");
+  const campos = [["Objetivo","objetivo"],["Desenvolvimento","desenvolvimento"],
+    ["Sichá","sicha"],["Parte Técnica","parte_tecnica"]];
+  $("#m-body").innerHTML = campos.map(([nome,k])=>{
+    const v = p[k];
+    return `<div class="field"><h3>${nome}</h3>
+      <div class="val${v?"":" empty-val"}">${v?esc(v):"— não informado —"}</div></div>`;
+  }).join("");
+  $("#overlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){ $("#overlay").classList.remove("open"); document.body.style.overflow=""; }
+
+function buildChips(){
+  const counts = {};
+  DADOS.forEach(p=>p.categorias.forEach(c=>counts[c]=(counts[c]||0)+1));
+  const box = $("#chips");
+  Object.keys(NOMES).filter(c=>counts[c]).forEach(c=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.setAttribute("aria-pressed","false");
+    b.textContent=`${NOMES[c]} (${counts[c]})`;
+    b.onclick=()=>{ if(activeCats.has(c)){activeCats.delete(c);b.setAttribute("aria-pressed","false");}
+      else{activeCats.add(c);b.setAttribute("aria-pressed","true");} applyFilters(); };
+    box.appendChild(b);
+  });
+}
+function buildAnos(){
+  const anos=[...new Set(DADOS.map(p=>p.shnat).filter(Boolean))].sort((a,b)=>b-a);
+  const sel=$("#ano");
+  anos.forEach(a=>{ const o=document.createElement("option"); o.value=a; o.textContent="shnat "+a; sel.appendChild(o); });
+}
+
+async function init(){
+  try{
+    const r = await fetch("peulas.json");
+    DADOS = await r.json();
+  }catch(e){
+    $("#count").textContent = "Não consegui carregar peulas.json (rode via servidor local ou GitHub Pages).";
+    return;
+  }
+  $("#total").textContent = DADOS.length;
+  buildChips(); buildAnos(); applyFilters();
+}
+let deb; $("#q").addEventListener("input", e=>{ clearTimeout(deb); deb=setTimeout(()=>{q=e.target.value; applyFilters();},180); });
+$("#ano").addEventListener("change", e=>{ano=e.target.value; applyFilters();});
+$("#ordem").addEventListener("change", e=>{ordem=e.target.value; applyFilters();});
+$("#more").addEventListener("click", render);
+$("#close").addEventListener("click", closeModal);
+$("#overlay").addEventListener("click", e=>{ if(e.target.id==="overlay") closeModal(); });
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeModal(); });
+const ctrl=$("#controls");
+addEventListener("scroll", ()=>ctrl.classList.toggle("stuck", scrollY>header.offsetHeight));
+init();
+</script>
+</body>
+</html>
