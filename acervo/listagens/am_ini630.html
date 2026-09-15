@@ -1,0 +1,306 @@
+<style>
+.tabelabusca {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+}.tabelabusca table{
+	width:100%;
+	margin:0px;padding:0px;
+}
+.tabelabusca tr:nth-child(odd){ background-color:#ffaa56; }
+.tabelabusca tr:nth-child(even)    { background-color:#ffffff; }
+.tabelabusca td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:14px;
+	font-size:19px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.tabelabusca tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabelabusca tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabelabusca tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}.tabelabusca tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.divbusca{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding: 7px;
+}
+.tabelabusca tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabelabusca tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.umpoucomais {
+	display:none;
+}
+
+</style>
+<div class="divbusca">
+	Buscar no A.M.: <input type="text" id="palavrachave"/><input type="button" value="Buscar" onclick="buscainterna();"/>
+</div>
+<script>
+nini=630;
+nfim=660;
+function prov1(){
+	$('#tamcerto').css("height", $('#busca').height() - $('.divbusca').height()*2);
+}
+prov1();
+
+function buscainterna(){
+	palavrachave = $("#palavrachave").val();
+	entrarAM(palavrachave,0,15);
+}
+
+function mostramais(e){
+e.next('.umpoucomais').slideToggle();	
+e.html("");
+}
+
+</script>
+<div id="tamcerto" style="overflow-y: auto; overflow-x:hidden;">
+<div class="tabelabusca">
+<table>
+<tr>
+ <td>Peulot de Sábado - página 44</td>
+</tr>
+    <tr><td><b>Tema:</b> história das tnuot e sua importâcia<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC conheçam a história das tnuot;
+QOC se aproximem e se apropriem da história das tnuot - e se sintam parte da história;
+QOC entendam a importância das tnuot andarem juntas;
+Falar um pouco da identidade da chazit e sua importância.<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: 
+Dinâmica:
+
+quebra gelo - einayim raglaim (para dividir grupos e alianças)
+
+intertnuot jogos vorazes - disputa de qual vai ser a tnua que poderá continuar sobrevivendo
+tnuot: chazit, dror, hashomer, ava, noam, bnei akiva
+a disputa será em torno de tópicos básicos de sua tnua, a ideia é(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2149'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> História de Israel através das guerras<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim saibam a história do Estado de Israel, através das guerras pelas quais passou.
+Obj.Específico: Que os chanichim saibam diferenciar e contextualizar históricamente as guerras e que saibam suas diferenças históricas e fatos <br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: Dinâmica: Através de um jogo de tabuleiro gigante
+Teriam os quadrados para eles andarem (os pinos) e ao longo dos quadrados teriamo 5 tipos diferentes de situaçoes
+1) Perguntas e repostas
+2) Provas
+3) Desafios (tipo teatrinhos)
+4) Curiosidades
+5) Sorte ou revés (ex: "47 paises aprovaram a (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=302'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> História de perseguição aos judeus<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: OG: que os chanichim conheçam os principais acontecimentos da história de perseguição aos judeus
+
+OE: que os chanichim entendam a origem do pensamento anti-semita<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: Polícia e ladrão:
+dividir em 2 grupos (policiais e ladrões), um dos policiais é um espião dos ladrões.
+O objetivo dos policiais é prender todos os ladrões. Para isso, eles têm que fazer provas para adquirir armar, que dão o "direito" de prender os ladrões.
+O objetivo dos ladrões é ac(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=132'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> histórias bíblicas e questionamentos para os dias de hoje<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Trazer a tematica do relacionamento com os pais . Questionar limites com os pais.
+Relacionar com a biblia.<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: .LARGAR CHANICHIM NA CHAZIT
+Peúla: Divididos em dois grupos, eles terão o objetivo de construir um madrich. Cada um vai ter a ordem de como as coisas devem ser feitas (manual de brinquedo). Essa ordem é diferente para cada grupo e é preciso segui-los a risca.
+PUTA PARTE TECNICA -  sharon faz d(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=204'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Historia da Chazit SP + Função da Chazit na Comunidade Judaica Paulista<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -Chanichim como membros ativos dessa historia e na suas participações comunitárias!
+-qoc entendam o papel da chazit em diferentes periodos historicos e a influencia que ela exerceu sobre eles 
+- anu chazit ou anu me chazit? 
+- o que eles desejam pro futuro da tnua e se eles acreditam que sao parte disso
+-questionar o papel da tnua hj em dia e o papel deles nisso
+<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: --- pedir para os Chanichim assistirem o documentario de 50 anos da Chazit. 
+
+--- 1 MOMENTO: 1958/1959
+contextualizacao mundial: 10 anos dp Estado de Israel, 58 Brasil ganha Copa do Mundo...
+Ja existiam tnuot escoteiras/chalutzianas que na teoria nao possuiam uma visao moderna de sionismo e a Ch(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=908'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Historia da politica e politica brasileira<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Analisem e questionem as diferentes ideologias políticas e econômicas.
+- Conheçam, Analisem e questionem diferentes ideologias como base para a formação da própria identidade.
+-reflexionem sobre sua coerencia ideologica e sobre a corencia ideologica dos partidos brasileiros
+-se questionem sobre em que partido votar e por que ja que nas proximas eleicoes tem direito a voto
+<br><b>Peulá dada para o shnat</b> 2017<br><b>Desenvolvimento</b>: Introdutorias:
+-Noticias
+-Explicar o funcionamento do sistema governamental brasileiro(tres poderes) pela dinamica:
+Os chanichim sao divididos em tres grupos ( legislativo, executivo e judiciario)
+Os legislativos tem que criar fofocas/ tarefas
+Os executivos tem que executar essas fofocas/ taref(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=246'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> historia de chazit<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: racional: achamos que é necessário fazemos mais uma peula sobre termos utilizados na chazit para eles se familiarizarem com isso
+
+objetivo: apresentar conceitos de chazit não conhecidos ainda por eles<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: dinamica : ocorreu um crime onde alguem explodiu a chazit e o objetivo deles é descobrir quem (joel, amanda, michele, pedro), como (com gasolina, fosforo, secador, bomba), porque (pq ela nao gostava da ideologia, pq ela tava com sono, pq ela tava afim, pq ela se machucou em um sabado) e quem sobrev(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1640'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Historias biblicas e valores humanos<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: reconhecer os valores humanos nas historias biblicas <br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: - Quebra gelo: Rei ropa, hachutza e eu fui para feira...
+
+- Dividir em dois grupos através da pergunta 
+
+- Dança das cadeiras e a ultima pessoa que ganhar recebe a pista antes pro seu grupo 
+
+- Vai pra base e conta história com analogia, para receber a pista faz dinamica 
+
+- No final teat(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=879'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> historias da tora . importancia do nosso passado nos dias de hoje<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: .<br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>:  Dois grupos, cada grupo tem um líder e precisa buscar características para eles.
+Para cada um uma provinha: 
+
+Lider: perseverança macabeus
+Liderança todos
+liderança moshe
+Confiança avraham
+Coragem noe
+Audacia rei David
+Proatividade rabi akiva
+Humildade ester(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=636'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Historico de conflitos Israel-Palestina<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>:  reflexão sobre a questão Israel-Palestina; entender todo o contexto historico por tras da questao.
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Quebra-gelo: jogos vorazes
+
+Dinâmica: Iniciamos a peulá como sendo um palestino e um judeu, tendo problemas 
+segunda parte: jogo de tabuleiro gigante no chão do moadon, quadrados do tabuleiro:
+1) Perguntas e respostas -  se o time acertar a resposta anda 1 casa.
+Quem foi o principal nome da (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2037'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Homo Deus(share)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: levar a reflexão de quem são esses dois eus
+como eles formam sua personalidade?
+como os eus se relacionam com você e com os outros
+qual eu está mais presente? eles se acompanham?   
+questionar qual eu está mais presente na chazit 
+o que forma as relações interpessoais na vida (expectativa e exemplos)
+trazer isso na experiência de estar de quarentena // como reagimos a quarentena 
+<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: Os chanichim vão ser separados em duplas e vão receber diversas situações da vida e a partir disso eles vão ter que fazer desafios ou outras coisas que mostrem a expectativa e a realidade, outro que mostre a realidade e o pós, e o último que mostre expectativa e pós. 
+COISAS PARA FAZER 
+TI(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1995'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Horizontalidade<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: RACIONAL: Devido ao acontecimento da semana passada que envolveu violência e brigas decidimos dar uma peula que vai tratar respeito e maturidade ao longo dos próprios sábados. Nessa primeira peula queremos abordar uma maior horizontalidade e confiança dos chanichim com os madrichim. 
+
+OBJETIVOS:
+- Conseguir a confiança dos chanichim para conseguir abordar assutnos mais profundos como respeito e maturidade. dando maior sentido quando formos falar de temas mais serios. <br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: quebra gelo: einaim raglaim 
+A dinamica vai ser o controle das rotina de cada um de nós ate o momento em que chegamos no chug.
+
+Fantasia dirigida pra transfusão do corpo do Thalen.
+Agora vocês viraram o Thalen. 
+Vocês vao fazer a rotina dele e tomando as decisoe necessarias. 
+
+Como devo s(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1836'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> IDEIAS<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: .<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: glow party
+camiseta
+filme
+mascara
+peula de mario kart
+YOSHI
+almoço maluco
+Dormida na casa de alguem, na sexta pro sabado esquenta pra machane. 
+Peula sobre o futuro e o passado! Imagianr como sera o futuro deles e apresentar um pouco sobre como foi o passado!
+
+o bem e o mal
+e se eu fosse(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1413'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> IDENTIDADE<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: A PRIMEIRA PEULA TEM FOCO EM DESENVOLVER A IDENTIDADE DOS CHANICHIM , POREM SUPERFICIALMENTE . HA NESCESSIDADE DE TRABALHAR A IDEIA MAIS PROFUNDAMENTE PARA PODERMOS DESENVOLVER OUTROS TEMAS<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: MIMICA 
+CADA CHANICH ESCREVERA DUAS PALAVRAS QUE OS DESCREVEM , AI ROLA MIMICA
+
+OS CHANICHIM FORMARAO 5 FAMILIAS , BASEADAS NAS 5 TEORIAS DE IDENTIDADES , AS 5 FAMILIAS TERAO A MESMA HISTORIA E UMA SALA , MAS CADA FAMILIA CONSTRUIRA  SUA SALA A PARTIR DAS CARACTERISCAS DAS HISTORIAS QUE SAO MAIS (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1370'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Identidade de cada um dentro do grupo, a união faz a força<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Reflitam sobre importância de todos na formação no grupo.
+- Entendam que através da união do grupo atingem mais facilmente os seus objetivos
+<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Olimpiadas de 2016 madrichim x chanichim (ir fantasiado de atleta israelense)
+
+Enquanto eles fazem o desenho de pessach, nos vamos sumindo aos poucos, e so vai sobrar o pt. Ele vai entregar uma carta para os chanichim, falando que nos estamos nas olimpiadas, e queremos desafia-los. Pistas levarão(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=181'>Clique Aqui</a></span></sub></td></tr>
+</table>
+<table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(am,614,629)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('am',661,676)">Próxima página-></a></u></center>
+<tr>
+ <td>Peulot de Machané: - página 44</td>
+</tr>
+    <tr><td><b>Tema:</b> Dogmas (Guiboromanim) + shabes<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - proporcionar uma perspectiva do dogma como uma prática relacionada com valores apropriados (uma verdade aparentemente "indiscutível", mas mutável de acordo com suas crenças);
+- tratar o Pirkei Peilim como um dogma construído de nós para nós mesmos;
+<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: - Encaramos o Pirkei Hapeilim como um dogma positivo e orgânico, no sentido de aplicação deste no meio que o condiz ~ usaremos o doc como fio condutor e disparador ~
+
+PEULÁ NA PISCINAAAAAAAAAA UHUUUUUU
+
+- chanichim serão divididos pelos pontos/práticas do Pirkei Hapeilim (4)
+- cada grupo (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6612'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dogmas(convivência e expressão) <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Proporcionar perspectiva do dogma como uma pratica relacionada com valores apropriados - Dogmas como pratica representada como uma verdade indiscutível, mas mutável de acordo com suas crenças.
+Pirei Peilim - como um dogma construído de nós para nós mesmo. Isso o torna necessáriamente pejorativo.<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: Entremos o PirkeiHapeilim como um dgoma positivo e organico no sentido de aplicação deste no meio que o condiz. Usaremos o doc como fio condutor e disparador.
+
+PEULÁ NA PISCINAAAAAAAAAA UHUUUUUU
+
+Chanichim serão dívidas pelos pontos/práticas do PirkeiHapeilim. Assim criaram dogmas e terão(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6648'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dois Estados Para Dois Povos<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim reflitam sobre a importância que um território tem para um povo<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Os chanichim estão prestes a participar das Omaniadas Aquáticas de Verão, o grupo que ganhar a competição ganhará pontos na competição final da machané. Mas antes de iniciar a competição irão treinar para a mesma em seus respectivos cts, cada madrich guiará um grupo e organizará um min(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3922'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Don’t be afraid (não seja ingênuo) - Rei Leão<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que reflitam sobre suas seguranças e ansiedades que passam ao longo da vida; fazer com que eles sejam capazes de serem independentes na hora de realizarem as suas escolhas.
+conquistadores: que conquistem a machané, que conquistem a chazit, que conquistem a vida, e que saibam que estarâo juntos vai ser eles por eles<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: quebra gelo: ria ria
+Os chanichim passaram por inumeras etapas de vida e nessas terão que tomar decisões na vida adulta e que é muito normal se sentirem inseguros (dai vem o lema Don&#039;t be afraid). Assim serão divididos em 3 grupos e as etapas serão bases.
+Etapas: 
+
+ESCOLA para passar n(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6433'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DOR<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - qoc entendam sobre os genocidios que as minorias sofreram ou ainda sofrem 
+-<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: dinamica:
+
+- os madrichim serão os colonizadores portugueses e eles vao "descobrir o brasil", os chanichim serão  os indios, eles serão dividios em tribos 
+(arara, arawete, asurini, juruna)
+
+Cada tribo acreditara em um Deus
+ARARA- acredita no deus sol
+ARAWETE-Acredita no deus TERRA
+ASURIN(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5555'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dorgas<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: EXPLORAR - MEDO: medo de sentir vontade de experimentar, repressão, medo dos efeitos, medo de recusar e ser reprimido, pressionado
+- aproximar o tema das drogas na vida deles 
+- mostrar que usar ou não qualquer tipo de droga é uma questão de escolhas e que eles devem enfrentar seus medos (quaisquer que sejam) para tomar uma escolha consciente.  <br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>: - os chanichim estarão no ginásio fazendo jogos (jogos diferentes - SEM ARRUTZA E FUTEBOL) no escuro e enquanto isso, em outra sala haverá uma espécie de "festa" (MÚSICA ALTA, DOCES, NEON, REFRIGERANTE).  
+- no começo da peula, um madrich vai chamar um chanich pra festa e depois que ele sair (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=4057'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dormir pós Gadna<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Gadná ser mais significativa
+<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Acordaremos os chanichim e falaremos que estamos em meio a uma guerra e eles terão que ajudar a nos defender (tocar sirene)
+Chanichim deverão achar bases em meio a machané e nelas aprender comandos que ajudarão a defender:
+BAZASTA: ensinar como abaixar para bomba
+RIMON: ensinar como abaixar p(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2972'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Doutrina do Choque<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim entendam o conceito da Teoria do choque e saibam reconhecer se
+passam por choques, e como eles reagem de acordo com os choques que passam.
+<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: DIN�MICA: 
+Come�a a peul� com um quiz sobre direitos humanos.
+Do nada os madrichim v�o ficar putos porque a hanag� usou o dinheiro que a kvutz�
+arrecadou para a machan�, em coisas do sitio, ao inv�s de comprar as coisas pra festa que os
+madrichim queriam. Os chanichim v�o ficar putos com isso, e(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=96'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Doutrinação/Simbologia/Chazit<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Geral: 
+-Entender o que é doutrinação
+Específicos:
+- Aproximar o conceito de doutrinação na Chazit, se utilizando dos símbolos existentes
+-Promover a reflexão se nós somos doutrinados pela Chazit (Chazit é um ambiente educativo e que toda educação é ideológica, de modo que pode haver sim doutrinação)<br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: DINAMICA
+-Q.G.:Comando bimbalê
+-Dilemas:
+Chocolate branco ou preto
+Banana ou maçã
+Lerner ou alex
+iom laila ou gadná
+Azul ou Vermelho
+-Rola ou cabo guerra nesse momento?
+-Chanichim dividos e 2 grupos, vão lutar entre si pelo modelo de sociedade (capitalismo contra comunismo). Faz pequen(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3795'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Drogas<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Passar a eles a quest&#227;o das drogas como uma escolha a partir de uma situa�&#227;o de vulnerabilidade. Abordar na peul� a reflex&#227;o do porque fazer, como fazer, escolhas e conhecimento pr�prio. Discutir o fato de que por tr�s de toda as escolhas existem quest&#245;es existenciais.<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: Peul� mais introspectiva
+
+1)Come�amos a peul� com uma linha do tempo (uma folha preparada pra cada um) com o ano desde o nascimento deles at� hoje. Idividualmente, eles devem preencher essa linha com 4 momentos mt marcantes bons e ruins. Depois disso, devem puxar uma setinha em 1 de cada momento e(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=570'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DROGAS (Hatzmi)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - QOC se conscientizem que estão em uma fase da vida sujeita ao aparecimento de drogas.
+- QOC entendam que as drogas já estão consolidadas na sociedade e o nosso papel é saber lidar com elas.
+- QOC entendam o porque e como as pessoas usam determinadas drogas. 
+
+<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: - Treinamento de polícia - Faremos algumas pilhas dizendo que é um treinamento policial, envolvendo certas atividades físicas. Na hora da prática, alguém vai chegar para os chanichim e dizer que há 5 criminosos usuários de drogas pelo sítio e que eles devem encontrá-los. Estaremos espalhado(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8992'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DROGAS - lança perfume - rita lee<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC entendam como as drogas permearam o homem ao longo de sua existência 
+QOC dismistifiquem as drogas e sua relação com elas <br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: DINÂMICA: 
+chegamos todos caracterizados de drogados. Falamos que vamos levá-los para um museu muito legal. Chegamos na villa country e lá estão espalhadas informações sobre drogas (maconha, haxixe, K9, md, cogumelo, nicotina). Cada dupla deve escolher uma droga e fazer uma apresentação com(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=9179'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DROGAS - LIBERDADE VS LIBERTINAGEM<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: Durante todo o ano de amelim, verificamos certa imaturidade com a questão das drogas, além de identificar conflitos no grupo. Tivemos casos pontuais graves e vemos a necessidade de trabalhar o grupo e o individual
+
+Objetivo: 
+Trazer os conceitos de liberdade e libertinagem na relação com as drogas e o grupo. Questionar a relação de drogas e kvutza.
+
+Expor a questão das drogas em marcos de chazit. 
+
+Discutir a questão de drogas na chazit.
+
+Refletir sobre o porque do uso de drogas e dar a liberdade para possíveis questionamentos sobre.<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: INTRODUTÓRIA:
+Papel nas costas com perguntas x e algumas para introduzir o tema sem expor muito
+
+1ª DINÂMICA:
+Papeis pela sala dos sofas com situações que envolvam drogas dentro da chazit e do grupo e os chanichim devem escolher "Sim" e "não", "me incomoda" "não me incomoda".
+
+
+
+2ª D(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5053'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> drogas e influencias<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: tematizar a questão das influências na vida deles e questionar a validade das influências<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: - os chanichim estarão no ginásio fazendo jogos (jogos diferentes - SEM ARRUTZA E FUTEBOL) no escuro e enquanto isso, em outra sala haverá uma espécie de "festa" (MÚSICA ALTA, DOCES, NEON, REFRIGERANTE). 
+- no começo da peula, um madrich vai chamar um chanich pra festa e depois que ele sair d(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=4763'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Drogas larguei (T M e K)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -conhecer os diferentes tipos de drogas e seus efeitos como forma de estar preparado para quando tiverem(caso tenham) contato com isso.
+-saber trabalhar as influencias com relacao a drogas.
+-trabalhar os efeitos causados pelas drogas nas pessoas ao seu redor.<br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: Dinamica: Passar o Filme aos 13.
+
+
+Sicha: apos o filme os chanichim serao divididos em 3 grupos, um com cada madrich, onde em cada base sera trabalhado um aspecto diferente sobre as drogas, sao eles:
+-drogas licitias;
+-drogas ilicitas;
+-vicios e consequencias;
+(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=4679'>Clique Aqui</a></span></sub></td></tr>
+    </table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(am,614,629)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('am',661,676)">Próxima página-></a></u></center>
+</div>
+</div>

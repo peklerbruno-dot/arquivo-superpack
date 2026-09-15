@@ -1,0 +1,296 @@
+<style>
+.tabelabusca {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+}.tabelabusca table{
+	width:100%;
+	margin:0px;padding:0px;
+}
+.tabelabusca tr:nth-child(odd){ background-color:#ffaa56; }
+.tabelabusca tr:nth-child(even)    { background-color:#ffffff; }
+.tabelabusca td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:14px;
+	font-size:19px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.tabelabusca tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabelabusca tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabelabusca tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}.tabelabusca tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.divbusca{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding: 7px;
+}
+.tabelabusca tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabelabusca tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.umpoucomais {
+	display:none;
+}
+
+</style>
+<div class="divbusca">
+	Buscar no A.M.: <input type="text" id="palavrachave"/><input type="button" value="Buscar" onclick="buscainterna();"/>
+</div>
+<script>
+nini=900;
+nfim=930;
+function prov1(){
+	$('#tamcerto').css("height", $('#busca').height() - $('.divbusca').height()*2);
+}
+prov1();
+
+function buscainterna(){
+	palavrachave = $("#palavrachave").val();
+	entrarAM(palavrachave,0,15);
+}
+
+function mostramais(e){
+e.next('.umpoucomais').slideToggle();	
+e.html("");
+}
+
+</script>
+<div id="tamcerto" style="overflow-y: auto; overflow-x:hidden;">
+<div class="tabelabusca">
+<table>
+<tr>
+ <td>Peulot de Sábado - página 62</td>
+</tr>
+    <tr><td><b>Tema:</b> manifestação<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: mostrar a importãncia de se manifestar quando algo vai contra seus interesses e ideais;<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: no começo os chanichim vao ter leis repressivas nas quais terao de viver de acordo.
+o papel com as leis vai estar em uma altura que eles nao alcançam para pega e rasgar. 
+vao ficar la por muito tempo ate que alguem vai chegar e dar a ideia para se manifestarem e pedirem nvas leis para o governo.(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=333'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> manipulação da mídia e monopólio<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim entendam que as midias podem ser tendenciosas (parcial), e ressaltar o senso critico analitico que 1 fonte não é necessariamente verdadeira<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: começamos com uma peulá aleatória, até  o BR entra e conta a história de que a casa vai ser vendida e pede o voto da kvutzá por que vai pegar a peilut deles.
+Foi discutido em hanala , cada kvutza deve ter um voto. Até a noite de hoje a kvutza deve ter um voto: contra a venda da casa ou a fav(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=209'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> mapas de israel<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: OBJETIVOS
+entrar em contato com a história de israel de modo prático e visual
+conhecer um pouco melhor o contexto no qual o país se formou 
+conhecer israel como um país geograficamente: com fronteiras, rios, mares… 
+refletir sobre a ideia de “dono da terra”
+desconstruir a ideia que israel está certa sempre + desvincular os conceitos: governo de israel, estado judeu e judeu
+ser sionista não significa apoiar incondicionalmente tudo o que o estado de israel faz e tem feito desde sua criação
+ser crítico como um meio de querer melhores convivências e paz → não desconsiderar os outros lados e julgá-los como fake news sempre
+nem todo judeu é bom, nem todo o palestino é mau (disdicotomização) 
+entrar em contato com o conflito que está acontecendo na atualidade
+<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: RACONAL DA ESCOLHA DE TEMA PARA A DORMIDA:  tendo em vista a atual guerra entre Israel e o Hamas, viu-se um aumento no antissemitismo mascarado de antiossinismo entre indivíduos que menos conhecem sobre o conflito e sua história. Por isso, através dessa dormida, gostaríamos de “armar” nossos(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2169'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Marc Chagall - Chodesh<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Mostrar a historia do Marc Chagall que é o tema do chodesh e mostrar seu impacto na sociedade<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: Sacanim
+quebra-gelo: draw something
+
+Depois do quebra gelo, o Marc Chagall (Getz) vai aparecer e ir analisando os desenhos e falar com sotaque russo que são todos muito bons e que eles tem que participar de um super concurso de esculturas.
+Primeiro, pra participar, eles vao ter que conhecer um (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1936'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Marcas-ident. judaica, shoa e rosh hashana<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC linken a sua identidade judaica com a shoa. As coisas Deixam marcas, relacionar isso com Rosh hashana também e Tshuva
+E queconheçam a hist. do juizo de Eichaman.<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: QG: algum jogo que deixa marca ex. do beijinho, guerra de canetinhas...
+
+Desenvolvimento:
+cada um term o seu perfil no facebook
+1- preencher o seu perfil no face, com coisas que eles curtem (filme, banda...)
+2-Rodada de comentários sobre as coisas que eles curtiram (e madrichim fazem comentari(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=976'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Marcos de Chazit<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que eles se familiarizem com os marcos da Tnuá ( mifkad,havdalá, machané )<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Quebra-gelo: parte da frente do moadon em forma de onibus, cantaremos musiquinhas de onibus e batata quente.
+Metodologia:
+Quatro "alas": (cipós)dia, (fundo do rio)tarde, (aves) fim de tarde, (leão) noite
+Tabuleiro humano leva eles até as pistas
+1-Macacos
+Provinha 1- "macaco mandou"
+Provinha(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=214'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Marcos de Chazit (local + continental)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: racional:
+acreditamos que falta muito conhecimento dos chanichim acerca do que ocorre por tras dos panos; eles sabem muito pouco alem da hadracha
+
+objetivos:
+-conhecer marcos locais
+-conhecer marcos continentais
+-refletir sobre como a chazit funciona nos outros marcos que nao a hadracha
+-refletir sobre como a chazit se linka e se conecta<br><b>Peulá dada para o shnat</b> 0<br><b>Desenvolvimento</b>: PEULA DE SUJAAARRRRRAW
+
+Marcos locais-hanala,chinuch,mokdim,guizbarut,mazkirutvaadot, hanaga
+Marcos continentais: moatza, central, pemach
+
+QG: 1 qg deles + 1 nosso (cuspir a agua)
+
+HANALA -> HANAGA -> CHINUCH -> MOKDIM -> GUIZBARUT -> VAADOT
+PEMACH -> MOATZA -> CENTRAL
+
+A peula comecara e (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1589'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Maria vai com as outras<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim percebam a importancia de suas ações.<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: sss(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=146'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> mario bros e genero<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Questionar relações de gênero presentes na vida deles
+Questionar uma moral presente nos video games
+
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Mario bros e relações de gênero 
+
+Racional:
+
+Tratar um tema importante que achamos que deve ser trabalhado com esse kvutza através de uma temática que lhes agrada.
+
+Objetivos:
+Questionar relações de gênero presentes na vida deles
+Questionar uma moral presente nos video games
+
+
+
+D(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1683'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> mario machista<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: 
+Questionar relações de gênero presentes na vida deles
+Questionar uma moral presente nos video games
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Mario bros e relações de gênero 
+
+Racional:
+
+Tratar um tema importante que achamos que deve ser trabalhado com esse kvutza através de uma temática que lhes agrada.
+
+
+Dinâmica:
+Qg:
+
+A princesa Peach foi sequestrada pelo mslvado Bowser e o objetivo deles é resgata-lá. E durante o pro(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1710'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> MASCARAS<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - conhecer melhor os madrichim, nos aproximar
+- sentir a chazit como um lugar "seguro" para serem quem eles sao
+- comparar escola e outros ambientes, alem da chazit (peulot iguais...)
+- mostrar que a kvutza deve ser um espaço confortavel para todos.
+- voce e o grupo<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: MOADON 2º ANDAR:
+
+QG: jogo da memoria fisico (batuque)
+
+DINAMICA:
+
+- 3 grupos
+- somos palhaços felizes , dancando, fazendo brincadeirinhas...
+- festona
+- grupos separados por cores seguem os sus respectivos palhacos
+- palhacos tristes espalhados pela cip com seus grupos... que fingem est(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1947'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Mashiach atual e para que ele serve<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - o mundo de hoje precisa de um Mashiach?
+- vocês acham que no futuro ainda vai haver a necessidade de existir Mashiach?
+- Ressignificar o significado de Mashiach;
+<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: -QG;
+- vídeo globo repórter;
+- pedir para eles escreverem 3 problemas que ele diagnosticam no mundo;
+- depois, cada madrich vai estar em uma sala e eles vão ser divididos e entrarão em cada uma das salas e lá, conversarão com os madrichim sobre formas de resolucionar os problemas que eles e(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1111'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Mashiach na atualidade<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -QOC reflitam sobre o que pessoas deixam de fazer ou fazem para terem uma vida após a morte. Egoísmo?
+-QOC se questionem sobre a passividade de esperar Mashiach pra um mundo melhor e ao mesmo tempo que Mashiach só vai chegar quando o mundo estiver bom.
+-QOC reflitam se a utopia de Mashiach pode ser real. 
+- QOC questionem se precisamos de um Mashiach, se nao podemos ser nossos proprios mashiach. <br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: QG: mímica complexa
+
+Após o QG os chanichim estarão numa sala sozinhos, ja que nós vamos ter saído e deixado uma caixa de pecados que vai ter dentro: balas, chocolate, uma foto de um cú, uma camisinha, um cigarro, absorvente, #YOLO com uma placa em cima escrito: NAO ABRA.
+
+Vamos dar 5/10 m(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1194'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> massada among-us<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: OBJETIVOS
+entrar em contato com a história de masada e refletir sobre o seu significado na historia do povo judeu
+relacionar a historia pessoal e autodeterminação judaica atual com a de tempos antigos e distantes.
+refletir sobre a importância de levar em consideração o seu próprio pensamento crítico quando se trata de analisar histórias 
+questão do suicídio coletivo X várias pessoas se suicidando → NÃO FAZ SENTIDO
+discutir sobre os elementos que compõem uma vida judaica em cidade
+apontar a ressignificação de espaços históricos para usos hoje em dia
+ex. massada como parte do treinamento de exército: 40 kg nas costas pelo caminho da cobra → resiliência 
+<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: RACONAL DA ESCOLHA DE TEMA PARA A DORMIDA:  tendo em vista a atual guerra entre Israel e o Hamas, viu-se um aumento no antissemitismo mascarado de antiossinismo entre indivíduos que menos conhecem sobre o conflito e sua história. Por isso, através dessa dormida, gostaríamos de “armar” nossos(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2168'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Masterchef das tnuot<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -conhecer as tnuot de sp e mundial
+-história importância das tnuot para a comunidade judaica
+-instigar o sentimento tnuati chazitiano<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: Quebra Gelo X
+
+INGREDIETES:
+-Leite condensado (4 LATAS)
+- Maisena (gabel e will)
+- leite ninho (gabel)
+- nescal (evy)
+- banana e morango (kik)
+- granulado (qm tiver em casa)
+
+1) individual - criar um movimento juvenil do zero
+cada um vai receber um papel escrito 
+OQUE É UM MOVIMENTO JUV(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1645'>Clique Aqui</a></span></sub></td></tr>
+</table>
+<table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,884,899)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',931,946)">Próxima página-></a></u></center>
+<tr>
+ <td>Peulot de Machané: - página 62</td>
+</tr>
+    <tr><td><b>Tema:</b> GÊNERO E SEXUALIDADE 1- POP<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -questionar os esteriótipos de gênero que nós vivenciamos no nosso dia a dia;
+-propiciar um ambiente no qual se sintam confortáveis pra fazerem suas escolhas sem serem influenciados por tais esteriótipos;
+-questionar sobre o binarismo existente na sociedade e como se sentem diante disso;<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: CONTEXTO: eles podem não ter percebido, mas foi colocado um pózinho na comida do vips e todos perderam suas características. Eles serão divididos em 4 (ou 5- ver quantidade de pts) grupos, cada um tem um personagem, e cada grupo deve encontrá-lo. Esses personagens são príncipes e princesas, e(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5901'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadná<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: inovar, vamos aproveitar este momento para trazer algumas questões a tona a respeito do exército de israel<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: desenvolvimento padrão de gadná, só que pela madrugada, já de manhâ
+meta: acordar as 5:40 da manhã
+
+sichá: porque 3 anos de homem e 2 anos de mulher? o que vocês acham sobre os religiosos que não fazem exército? o que vocês acham sobre ? como voces acham que a pátria deve ser desenvol(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6453'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadná + sequestro <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: gadná ue<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: NOITE 3 - COMEÇA 3H
+Peulá: GADNÁ ARABE
+Desenvolvimento: A gadna será dividida em 2 partes. Primeiro será uma gadná padrão, mas arabe (não padrão rs), depois eles irão dormir e nós sequestraremos os chanichim que estiverem na shmirá. Depois de deixar os sequestrados em algum lugar, nós(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8314'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadná - Kung Fu Panda<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim entendam o que se passa no exército de Israel, comandos, funções e qualquer um possa ter um papel fundamental dentro de um grupo, onde todos são importantes.<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Iremos acordar eles fantasiados de Kung Fu Panda, contaremos que o Pergaminho do Dragão está em perigo e nós, do Quartel General, precisaremos de novos recrutas para ajudar a recuperá-lo. Antes precisarão passar por alguns testes básicos, incluindo físico e psicológico:
+1-Leitpaked(Contagem(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3457'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNÁ<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -que eles compreenda a função desse grupos no processo pré e pos independência
+-Entender o sacrifício dos participantes
+<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Levar os chanichim para o salão de baixo e prender eles ali e ficar vigiando eles e mandando fazer exercícios.Entre eles vai existir um madrich que vai falar que ele pode treina-los mas precisam sempre voltar para a sala da maneira mais rápida pq os guardas vão voltar e eles precisam estar lá.D(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2209'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNÁ - MC DONALD&#039;S<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Transformar a gadná em um momento mais divertido;
+- Fazer algo NUNCA ANTES VISTO #VISIONÁRIOS;<br><b>Peulá dada para o shnat</b> 2032<br><b>Desenvolvimento</b>: MC DONALD&#039;S(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=9997'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNÁ/PEULÁ<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Simulação de treinamento para em casos de guerra. 
+- Ensinar alguns comandos em hebraico.<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: - A gadna será dividida em 2 partes. Primeiro será uma gadná padrão, mas árabe (não padrão). Depois eles irão dormir e nós sequestraremos os chanichim que estiverem na shmirá. Depois de deixar os sequestrados em algum lugar, nós acordaremos, de novo, os chanichim e diremos que alguns sold(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=9017'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadna<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: chanichim aprendam de uma forma diferente os comandos basicos sovieticos de batalha/sobrevivencia <br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>: serao acordados com uma musica patriotica com o tema de URSS, e irao seguir os comandos dos generais e comandantes, aprendendo a cultura militar sovietica(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=744'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNA (M3)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC possam se divertir
+QOC possam refletir  sobre a necessidade de renovação
+<br><b>Peulá dada para o shnat</b> 2030<br><b>Desenvolvimento</b>: Eles são video games que precisam atualizar para não ficarem obsoletos
+
+Iremos dividir eles em duplas e cada madrich vai ficar controlando eles e fazendo eles fazerem coisas: pula, chuta, corre, deita...
+
+Espalhados pelo vips vão ter vários joguinhos:
+
+•Joguinho de obstáculos - jogo da (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=9331'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNA - 6H<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Gadna à brasileira.
+Como daremos a peula ao raiar do sol, a intenção é que ela sirva como disparador para o dia que se incia, onde falaremos sobre o Brasil e o Brasileiro<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: GUERRA ALN X MILITARES
+
+2 grupos, aln e militares
+deveram montar barracas --> point que a bandeira/mapa ta escondido
+
+aln:
+- treinamento de camuflagem (no bosque, e vao ganhar maquiagem pra se camuflar)
+- se esconder no bosque
+- imitar os barulhos da selva
+- criar um mapa interativo do vips(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6829'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadna - FEITA<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Gadna oba<br><b>Peulá dada para o shnat</b> 2032<br><b>Desenvolvimento</b>: COMANDOS BASEADOS EM PIXAR: 
+
+SENTIDO → pose de respeito e momento de ouvir 
+
+Comando dinossauro: engatinharem sem o joelho
+Comando peixinho: nadar 
+Comando Toy Story: estátua e caírem no chão (virarem brinquedo)
+Comando rato: girarem muito rápido
+Comando balagan: uuuuuuuu (pular e bal(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8441'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNA MD2 - MOSHAV<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Aplicação das teorias discutidas na peula do ataque 
+<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: Vamos acordar os chanichim no pique de treinamento, gritaria e agitação
+
+vamos dizer que não nos sentimos mais seguros no moshav e que nós mefakdim vamos treinar os moradores (eles) para caso haja uma invasão.
+
+Dizemos que infelizmente essa é a realidade, e que vamos nos preparar todos os (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10016'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> GADNA TZAVAH MD3<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: * QOC tenham as primeiras experiências numa gadná
+* QOC aprendam o que é a tzavah
+* QOC saiam escrachados
+ <br><b>Peulá dada para o shnat</b> 2031<br><b>Desenvolvimento</b>: Madrichim de preto acordam os chanichim com apitos e gritos avisando que vai ter gadná naquele momento
+
+Fileira de chanichim/apresentação dos mefakdim (nomes zuados) 
+Lehit Paket (contagem em hebraico)
+Levar eles para o canto aonde acontece o ataque
+
+Comando Padzastah
+Comando Shutaf
+Coman(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8498'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadna/Yom Laila<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: tratar terrorismo <br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: Os chanichim serao o grupo terrorista, porem nao falaremos isso para eles, eles acharao que sao os "bonzinhos" e terao uma preparacao (gadna) para vencer os seus inimigos que ameacam a sua independencia
+Habitantes fantasmas daram um ou outro susto e sequestrarao 2 filhos o filhos irao atras deles e(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=4927'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Gadna: Guerra dos 6 dias<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: trazer uma experiencia do tzahal
+entender a guerra dos 6 dias<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Acordar chanichim com seriedade e barulho de apito, mandar colocarem tênis,
+roupa de exército quem tiver, e sair o mais rápido possível.
+Quando os chanichim forem saindo, mandar ficarem em fila e em silêncio.
+Chanichim (que são aprendizes de chaialim-soldados) em fila, ensinar comandos:
+LE(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5611'>Clique Aqui</a></span></sub></td></tr>
+    </table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,884,899)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',931,946)">Próxima página-></a></u></center>
+</div>
+</div>

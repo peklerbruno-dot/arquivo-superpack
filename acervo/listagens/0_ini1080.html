@@ -1,0 +1,256 @@
+<style>
+.tabelabusca {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+}.tabelabusca table{
+	width:100%;
+	margin:0px;padding:0px;
+}
+.tabelabusca tr:nth-child(odd){ background-color:#ffaa56; }
+.tabelabusca tr:nth-child(even)    { background-color:#ffffff; }
+.tabelabusca td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:14px;
+	font-size:19px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.tabelabusca tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabelabusca tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabelabusca tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}.tabelabusca tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.divbusca{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding: 7px;
+}
+.tabelabusca tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabelabusca tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.umpoucomais {
+	display:none;
+}
+
+</style>
+<div class="divbusca">
+	Buscar no A.M.: <input type="text" id="palavrachave"/><input type="button" value="Buscar" onclick="buscainterna();"/>
+</div>
+<script>
+nini=1080;
+nfim=1110;
+function prov1(){
+	$('#tamcerto').css("height", $('#busca').height() - $('.divbusca').height()*2);
+}
+prov1();
+
+function buscainterna(){
+	palavrachave = $("#palavrachave").val();
+	entrarAM(palavrachave,0,15);
+}
+
+function mostramais(e){
+e.next('.umpoucomais').slideToggle();	
+e.html("");
+}
+
+</script>
+<div id="tamcerto" style="overflow-y: auto; overflow-x:hidden;">
+<div class="tabelabusca">
+<table>
+<tr>
+ <td>Peulot de Sábado - página 74</td>
+</tr>
+    <tr><td><b>Tema:</b> Papel da mulher no judaismo<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim conheçam o talmud e discutam sobre o papel da mulehr no judaísmo. Que os chanichim se interem da decisão política da Chazit sobre o assunto( mulheres do kotel)<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: Os chanichim virão vestidos invertido. Hojmens de mulher e mulher de homem, ou não ( quem quiser que venha) 
+Dinâmica sobre:
+* mulheres no judaísmo
+começa com um troca.
+Mãe no judaismo
+os chanichim vão ser mães e os madrichim filhos
+primeira dinâmica- nascimento- teatro dos madrichim (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=749'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> papel do madrich<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Questionem o papel do madrich, analisem suas funções e seus dilemas na relação chanich-madrich<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: naquela hora em que a gente fica no ken naquela conversinha pré peula ir soltando varias coisas "que nao se falam "; ex: bebi muito ontem, nao vou nunca na halana, etc.
+vamos estar vendendo um jantar especial no seminario e p/ poder compra-lo eles vao ter que, em grupos de 3, ir apresentando a mel(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=376'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Papel do Madrich e Respeito<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: achamos relevante Dar essa peula por três motivos: o primeiro consiste num não reconhecimento deles no nosso papel de madrich ; o segundo é porque não ha um limite e um consenso do que é uma relacao madrich chanich. o que gera desrespeito, desconforto e principalmente um descomprometimento com o chaver chazit. Eles estao em um curso para ser madrich e precisam entender qual é a responsabilidade e o que é ser madrich na chazit.
+Objetivos: 
+- Refletir sobre o papel do chug de ofakim e qual a nossa relacao com os chanich
+- " Acordar " para a realidade ofakim. (Faz tempo que insistimos para eles terem compromisso e sobre a responsabilidade de ser de ofakim, e somos constantemente ignorados enquanto metodo reflexivo)
+- Ser ofakim: 2 kvutza mais velha e daqui ha 2 anos estar em peilut e poder ser madrich. 
+- Questionar o por que estao na chazit e o por que continuarem. 
+
+<br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: quebra gelo
+Chamar o Bé Peres para conversar com eles. Apresentar os documentos:
+    - dinheiro
+    - chanichim 
+    - carta do Presidente da Cip
+    - Konib
+Deixar claro que a Chazit não acabou por agora. Eles terão sabado de peula normal, central e todo semestre pela frente. Como vocês s(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1444'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Paradigma político<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - QOC desenvolvam uma noção dos termos de esquerda ou direita
+- QOC reflitam sobre práticas políticas serem ou não absolutas 
+- QOC questionem sobre o cenário de "guerra"
+- QOC reflitam sobre o que é uma democracia representativa 
+- QOC reflitam sobre a questão politico x apartidario na chazit + decisões tomadas <br><b>Peulá dada para o shnat</b> 0<br><b>Desenvolvimento</b>: QUEBRA GELO: X
+
+Cenário político de guerra. Dois partidos diferentes que podem ser eleitos para ficar no poder. 
+TESTE DO BUZZFEED: Lu x Abaca 
+
+Serão divididos em dois times. 
+Inicialmente, farão uma campanha política que deverá defender o suas ideias. 
+Depois buscarão por assinaturas(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1860'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Parasitismo na chazit (chanichut/peilut/kehila)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim reflitam sobre seu papel na chazit como chanichim grandes em momentos difíceis da chazit (pands), além de refletir o papel do pail para com a kehilá e a tnuá também
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: QUEBRA-GELO: infiltrado (verme, parasita)
+
+DIN MICA:  
+competição entre três grupos - história: vida na empresa/briga entre empresas/entrevista emprego novo
+
+contato
+mega senha
+2 verdades e 1 mentira
+CS composto
+
+PRÉ SICHÁ: debates 
+você está numa empresa há 15 anos, mas mudou o (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2036'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> parcialidade da mídia<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: ,,,<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: ...(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=84'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Parcialidade das Mídias/Informações<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim antes de formarem a opinião dobre algo, procurem por mais de uma fonte.<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: No começo do sabado os madrichim discutem na frente dos chanichim sobre o sorvete que vão comprar pra comer durante o sabado( sei deixar aparente que é sobre a discussão é sobre sorvete ).
+Os madrichim vão começar a peulá sem um dos membros que foi comprar o sorvete ( porém os chanichim n�(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=890'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Partidos políticos - Liberdade e Apartidarismo<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Apresentar o conceito de partido político e mostrar que existem ramificações por causa da liberdade
+- Discutir o apartidarismo da Chazit<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Quebra gelo: Fita crepe de discordo e concordo (começa bobo e vai evoluindo)
+
+Partidos: Ambientalista, Consumista, Religioso e Esportista (precisam de dinheiro, apoio popular, representatividade e propaganda)
+
+- Chanichim são aspirantes a presidentes e individualmente precisam ir atrás das ne(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=975'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Partidos politicos brasileiros, como militar atraves de um voto<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim saibam história e explicação sobre os Partidos atuais brasileiros, como futuros eleitores. Que eles enxerguem a situação da politica brasileira e questionem a importância do voto como forma de ativar, militar.<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: - introdutória: etiquetas com nomes dos candidatos (todos) eles tem que descobrir quem são e se juntar com alguém do partido deles – vão até o madrich e ganham a ideologia do partido e dinheiro
+Dinâmica:
+Leilão de coisas importantes para os partidos contruirem sua imagem- eles disputam pr(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=49'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Passagem para Omanim<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Introduzir a passagem para Omanim - responsabilidades de ser "grande"<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: .(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=658'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Passividade<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Que eles deixem de ser passivos
+- O futuro da Tnuá são eles.<br><b>Peulá dada para o shnat</b> 2015<br><b>Desenvolvimento</b>: Introdutória:
+
+- Teatrinho de passivo e ativo. Começa com os madrichim fazendo um teatrinho e os chanihcim terao que continua-lo. Somente a pessoa ativa poderá contornar a situação.(TEM QUE SER ENGRACADO PRA CARALHO E TEM QUE FUDER QUEM É O PASSIVO)
+
+Desenvolvimento:Começar com uma viagem(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=334'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Pêssach e liberdade<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: OG: que os chanichim reflitam sobre liberdade
+OE: que os chanichim reflitam sobre liberdade em suas vidas.<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: Os chanichim participarão de um jogo de RPG onde cada personagem terá uma condição diferente de liberdade. Durante a peulá, eles terão algumas opções de atividades que podem fazer em troca de chazititos para comprar doces - as atividades exploram as inteligências múltiplas.
+*sudoku/enigma(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=11'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> PEMACH<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: -(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1208'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Pemach (SEM SÁBADO)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: -(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=969'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> pemaj, a festa que não fomos convidados<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: queremos conversar sobre el pemaj,
+tanto a ideia do encontro, quanto o 
+marco de 2019.
+introduzi-las na discussão continetal e a importância dos padeiros(peiluiot) se encontrarem
+qual a influencia das outras peiluiot na vida chazitiana  <br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>: Assuntos a serem disxutidos no pemaj, ponto de judaísmo da chazit com enfoque no 3.1 e 3.2.
+
+3.1 – Vemos no Judaísmo a resultante da elaboração cultural do Povo Judeu ao longo de sua história; e reconhecemos nele uma gama de valores e tradições que devemos conhecer e vivenciar, bem como t(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1893'>Clique Aqui</a></span></sub></td></tr>
+</table>
+<table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,1064,1079)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',1111,1126)">Próxima página-></a></u></center>
+<tr>
+ <td>Peulot de Machané: - página 74</td>
+</tr>
+    <tr><td><b>Tema:</b> Iluminismo Judaico no contexto de países nacionalista.<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Objetivos: Entendam o que é o iluminismo judaico, inserido no contexto da época.
+
+Entender a inserção dos judeus nas sociedades e a necessidade da busca por uma identidade judaica além da religião. 
+
+Questionar a importancia de um nacionalismo judaico visto esse contexto (sionismo)<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: Dinamica: 
+os chanichim deverao sair do mundinho da tecnologia, para isso precisam se convencer disso. (pintamos um TEC na testa num primeiro momento, estao satisfeitos )
+jogando jogos - jogo de cartas 
+estao no chat - brincadeira da historia - um papel e a pessoa escreve uma linha e a seguinte v(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5046'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Ilusão<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Sichá<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: FILME "SHOW DE TRUMAN"
+
+Sichá:
+-contextualizar o filme
+-explicar o "True Man" -> homem verdadeiro por questionar a sua existência e tudo a sua volta: isso é importante?
+-todos tem o seu mundo: eu sou ator do seu, e você é o ator do meu
+-questionar o livre arbítrio (controle pelo meio em (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2658'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Ilusão - Pogroms<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim saibam o que são pogroms e como eles influenciaram no fluxo judaico
+QOC reflitam como eles lidam com idealizações, frustrações e ilusões<br><b>Peulá dada para o shnat</b> 2031<br><b>Desenvolvimento</b>: QG: Gato e Rato
+
+Vamos dividir eles em dois times, os gatos e ratos. Vão ter mais ratos do que gatos.
+
+Vai ser um grande policia e ladrão misturado com canibal.
+Os gatos vão ser a polícia e os ratos os ladrões
+
+antes de começar, um madrich líder vai explicar a situação para cada um d(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8919'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imaginação<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Enfatizar a importância da imaginação
+mostrar que criatividade e imaginação andam juntos e são "treinaveis"
+QOC reflitam se o uso excessivo de telas tira criatividade<br><b>Peulá dada para o shnat</b> 2031<br><b>Desenvolvimento</b>: QG: Mimica Complexa
+
+Fio condutor: Padrinhos mágicos
+
+O Timmy dos padrinhos mágicos só consegue ver e pedir coisas para os padrinhos quando eles imagina, porém ele nao está conseguindo. Ele tem uma tática para conseguir que a imaginação dele volte a funcionar, e ele ta chamando os chanic(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8927'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> imaginação fertil<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Mostrar que nao é bom ter a mente fechada pras coisas
+Mostrar que dar asas a imaginacao é um dos melhores jeitos de se divertir e assim, aprender
+Um sonho/imaginacao fertil pode se tornar realidade, basta querer<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Quebra-Gelo: cidade dorme alterado-
+Dinâmica:
+passar o video &#039;&#039;Pure imagination&#039;&#039; do filme pra eles 
+mostrar um mapa que leva eles até um tesouro o qual Willy Wonka(rafa) os desafia, e que contem toas as &#039;&#039;bases&#039;&#039; pelas quais devem passar ate chegar no te(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=1528'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> IMAGINE<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim entendam que é possível haver diferenças e que não é vergonha nenhuma. Que eles levem isso pra um cotidiano mais deles, percebendo que o preconceito pode acontecer nas pequenas coisas, não só por cor, gênero, etc. <br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: reality show do “Beauty and the Geeks”
+Dividimo-los em duplas, em que as meninas serão as “gostosas” e os meninos os “nerds”. De início daremos as características essenciais de cada categoria, por exemplo: todas as gostosas gostam de usar roupas curtas e muito rosa, falam de certa fo(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2302'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imediatismo<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: qoc se questionem sobre o tempo, sobre a vdia deles, sobre o que eles fazem de util, sobre o imediatismo x vida como um todo<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Paradigma: ao mesmo tempo que quremos mais tempo, gastamos tempo pra ter tempo. Tipo não queremos estar presente  no momento presente, não aproveitamos o que vivemos mas queremos. 
+
+
+Sociedade que eles tem que trabalhar pra ganhar tempo (tempo é dinheiro, e ao inves de dinheiros sao relogios i(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5674'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: qoc imerjam no tema da machane<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: GINASIO
+
+- entregaremos uma carta para os chanichim convidando eles para uma conferencia de tecnologia para os grandes genios do mundo virtual
+
+- essa conferencia vai acontecer no ginasio, que vai estar cheio de neon 
+
+- no meio da conferencia a internet vai cair (barulhos e vamos causar) - ro(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5592'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão – Introdução ao Survivor e retomar Carpe Diem<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - que entrem na pilha da machane survivor, de aproveitar o momento
+
+-controlar ansiedade e aproveitar a peula/retomar carpe diem
+
+- imersão total no mundo de machie<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: -de um jeito meio tribal primeiro tirar relógio, fazer sacrifício dos celulares
+
+- no fina peula, eles passarao pelas fases para ganhar o colar e separar nos grupos
+- separar nos grupos: fazer nome do grupo, hino, coreografia, grito de guerra e comprimento.
+- fazer maquiagem tribal
+- prova de(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3573'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão + Bereshit: criação do mundo / Fruto proibido + Desnaturalização<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: imersão na machané<br><b>Peulá dada para o shnat</b> 2017<br><b>Desenvolvimento</b>: 
+DESENVOLVIMENTO: 
+PARTE I: NÃO É PARA COMER (falar de forma natural, analogia com fruto proibído)
+Os chanichim ganham um ovinho de chocolate 	que será o mundo perfeito deles e portanto, eles devem cuidar.
+O que seria o mundo perfeito? 
+Leilão dos ideais de mundo + âmbitos da sociedade (m(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3238'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão do Livro + Efeito borboleta<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Imersão no tema da machané
+<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: Chanichim com roupa pra sujar.
+
+Recebemos uma caixa com as bexigas direto do espaço (meteoro). Vão fazer guerra de bexiga e todos vão se infectar com a doença do efeito borboleta.
+
+A cura está em um livro que se perdeu por inteiro e eles precisam achar agora a introdução (caderninho de ca(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3741'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão Luaras<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC entrem na brisa da machané e nessa imersão 
+QOC conheçam a pt luara (diva lua border rainha icônica mó legal)
+NORMA JOIAS
+QOC conheçam a NORMA JOIAS
+QOC reflitam sobre a relação da NORMA JOIAS com o ZILMO JOIAS (relação complicadíssima)
+QOC joias virem ourives 
+QOC Norma
+QOC e às joia
+
+<br><b>Peulá dada para o shnat</b> 2031<br><b>Desenvolvimento</b>: 4 belos homemz aranha foram parar misteriosamente no mesmo multiverso, e todos precisam arranjar um jeito de voltar para seus respectivos universos. Para isso os chanichim terão que ajudar os super herois a encontrar uma solução, que se encontra junto com o homem aranha original do universo que t(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10167'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Imersão no mundo pixar/vips - FEITA<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC entendam desde o começo que a machané vai ser baseada nas animações da Pixar 
+QOC se envolvam com esse mundo 
+QOC conheçam o espaço da machané, o funcionamento
+QOC estabeleçam as regras e combinados da machané deles junto com os madrichim  <br><b>Peulá dada para o shnat</b> 2032<br><b>Desenvolvimento</b>: RACIONAL: Muitos chanichim não conhecem o vips, nunca foram numa machané ou até mesmo na chazit, então é importante criar esse ambiente/sentimento de pertencimento, grupo. Além disso, importante que os chanichim entendam desde o começo sobre o nosso tema de machané e que estejam imersos ness(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8404'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> IMERSÃO<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - qoc entrem no "universo paralelo" da machané;
+- qoc busquem interesse, conexão e foco em todas as peulot da machané;
+- qoc se entreguem de corpo e alma pra machané;<br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: - eles entrarão na piscina, que é o cosmos, para lavarem a alma e falarão alguma coisa do nosso universo que eles querem deixar pra trás na machané, na piscina rolarão dinâmicas do fuko de purificação da alma, hidroginástica, eles terão que imergir por um tempo embaixo d&#039;água ouvind(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5001'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> IMERSÃO (Ro e Bru)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC entrem no ambiente da machané, se desprendendo da vida real (escola, celular) e "imerjam" no mundo chazit <br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Nesse começo de machané, queremos que os chanichim entrem de "corpo e alma" na semana! Se apropriar da machane tem a ver com o tema que trazemos, ver como a chazit pode ser muita coisa e se apropriar dela!
+
+Dinâmica: 
+
+Um grande sábio da religião COMPLETUISMO vai falar com os chanichim sobr(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5926'>Clique Aqui</a></span></sub></td></tr>
+    </table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,1064,1079)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',1111,1126)">Próxima página-></a></u></center>
+</div>
+</div>

@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Armário da Tik</title>
+<style>
+
+body {
+        background-color:#900;
+		overflow:hidden;
+}
+
+#quadPreto{
+
+	border-color:#FFF;
+	border-width:thick;
+	border-style:solid;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+.quadclass{
+	z-index:1;
+}
+
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #FFF;
+}
+a:link {
+	color: #009;
+}
+a:visited {
+	color: #06C;
+}
+a:hover {
+	color: #003;
+}
+a:active {
+	color: #06C;
+}
+</style>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+<div id="copyr" style="position: absolute; color: #CCC; text-align: center; bottom: 5px; z-index: 99; font-size: 70%; width: 672px;">
+©Copyrigth Chazit Hanoar Hadrom Americait. Vaadat Internet 2013, Chazak veAlê!        V1.0
+</div>
+
+<div class="allcontainer" style="position:absolute">
+<img src="backimg.jpg" name="bgimg" id="bgimg" style="position:absolute; z-index:-20;top:0;left:0"/>
+
+<script>
+function serializa(vet){
+  a=0;
+  saida = "";
+  for(i=0;i<vet.length;i++){
+    if(a>0){
+      saida+='&';
+    }
+    a++;
+    saida+="tags[]="+vet[i];
+  }
+return saida;
+}
+
+var framework=0;
+function quadPreto(){
+	if(framework==0){
+		$('.allcontainer').append("<div id='quadcontainer' class='quadclass'><DIV id='quadPreto'><div class='todoconteudoquadro'></div></DIV></div>");
+		$("#quadPreto").css("background-color","#000");
+		//$("#quadPreto").css("opacity","0.95");
+		$("#quadPreto").css("position", "absolute");
+		tamy=$('#bgimg').height()*95/100;
+		tamx=$('#bgimg').width()*90/100;
+		atop=$('#bgimg').height()/2-tamy/2;
+		aleft=$('#bgimg').width()/2-tamx/2;
+		hantes=800;
+		wantes=900;
+		$("#quadPreto").attr("width","1");
+		$("#quadPreto").attr("height","1");
+		$("#quadPreto").css("top", ($('#bgimg').height()/2));
+		$("#quadPreto").css("left",($('#bgimg').width()/2));
+		$("#quadPreto").animate({
+								width:tamx,
+								height:tamy,
+								top: atop,
+								left:aleft
+								},1000,function(){
+				//Botar aqui código para criar um botão de fechar que detroi o DIV----------
+			$('.allcontainer').append("<img  id='closeimg' class='quadclass' src='http://icons.iconarchive.com/icons/kyo-tux/delikate/512/Close-icon.png' width='48' height='48' style='cursor:pointer' onClick='fechar()'>");
+			$('#closeimg').css("position", "absolute");
+			ir=parseFloat($("#quadPreto").css("top"))-24;
+			vir=parseFloat($("#quadPreto").css("left"))+parseFloat($("#quadPreto").css("width"))-24;
+			$('#closeimg').css("top", ir);
+			$('#closeimg').css("left", vir);
+			abrirmenu();
+		});
+		framework=1;
+	}
+}
+
+function fechar(){
+	$("#quadPreto").slideUp(500, function(){
+										   $('.quadclass').remove();
+										   });
+	framework=0;
+
+}
+
+$(document).ready(function(){
+	$( document ).tooltip({
+      track: true
+    });
+
+							bgheight=$(window).height();
+
+
+						  bgwidth=bgheight*800/600;
+
+	$('#bgimg').css('width',bgwidth);
+	$('#bgimg').css('height',bgheight);
+
+
+	/*var img = $("#bgimg"); // Get my img elem
+	var pic_real_width, pic_real_height;
+	$("<img/>") // Make in memory copy of image to avoid css issues
+    	.attr("src", $(img).attr("src"))
+    	.load(function() {
+
+		if($(window).height()<600){
+							   bgheight=$(window).height();
+							   $('#bgimg').css('height',bgheight);
+						   }else{
+							   bgheight=600;
+							   $('#bgimg').css('height',bgheight);
+							   }
+    });*/
+		$(function() {
+		$('#box').dialog({
+						 title:'Você já viu as novidades? - 10/02/2017',
+						 modal:true,
+						 autoOpen: false,
+						 resizable:false,
+						 draggable:false,
+						 width: '55%',
+						 buttons: [
+								   {
+									 text:'Continuar' ,
+									 click: function(){
+										$(this).dialog('close');
+									 }
+								   }
+								   ]
+						 });
+		$('#box').dialog('open');
+	});
+	
+});
+
+function entrarEmTema(tema,argumentos)
+{
+	$("#quadPreto").append("<img  id='backimg' src='backimg.png' width='48' height='48' style='cursor:pointer' onClick='abrirmenu()'>");
+	$("#backimg").css('position','absolute');
+	$("#backimg").css('top',-24);
+	$("#backimg").css('left',-24);
+	//overlay:
+	$('body').append('<div style="background-color:#000; opacity:0.6; position:absolute; width:100%; height:100%; z-index:99; top:0; left:0" id="overlay"></div>');
+	//gif de loading:
+	$('body').append('<img src="load2.gif" style="position: absolute;" id="load">');
+	cincoporcento=$(window).width()*15/100;
+	$('#load').css('width',cincoporcento);
+	$('#load').css('height',cincoporcento);
+	$('#load').css('top',($(window).height()/2)-cincoporcento/2);
+	$('#load').css('left',($(window).width()/2)-cincoporcento/2);
+	$('#load').css('z-index',999);
+	//tentativa de acessar com ajax:
+	dataenvio="tema="+tema;
+	$.ajax(
+		{
+			type: "POST",
+			url: "buscaavancada.php",
+			data: dataenvio,
+			beforeSend: function() {
+				//antes de enviar (por um aviso de loading etc...)
+			},success: function(txt) {
+				//sucesso:
+				$('#load').remove();
+				$('#overlay').remove();
+				//deletar todo conteudo do quadpreto
+				$(".todoconteudoquadro").html('');
+				$(".todoconteudoquadro").append("<div id='busca'></div>");
+				$("#busca").css('position', 'absolute');
+				$("#busca").css('width',$("#quadPreto").width()*95/100);
+				$("#busca").css('height',$("#quadPreto").height()*95/100);
+				$("#busca").css('top',$("#quadPreto").height()/2-$("#busca").height()/2);
+				$("#busca").css('left',$("#quadPreto").width()/2-$("#busca").width()/2);
+				$("#busca").css('overflow-x','hidden');
+				$("#busca").html(txt);
+			},error: function(txt) {
+				// em caso de erro você pode dar um alert('erro');
+				alert("Erro AJAX. Informe o Rosh Internet!!!");
+			}
+		}
+	);
+
+
+}
+
+function entrarAM(chave,ini,fim)
+{
+	abrirmenu();
+	$(".todoconteudoquadro").html('');
+	$("#quadPreto").append("<img  id='backimg' src='backimg.png' width='48' height='48' style='cursor:pointer' onClick='abrirmenu()'>");
+	$("#backimg").css('position','absolute');
+	$("#backimg").css('top',-24);
+	$("#backimg").css('left',-24);
+	//overlay:
+	$('body').append('<div style="background-color:#000; opacity:0.6; position:absolute; width:100%; height:100%; z-index:99; top:0; left:0" id="overlay"></div>');
+	//gif de loading:
+	$('body').append('<img src="load2.gif" style="position: absolute;" id="load">');
+	cincoporcento=$(window).width()*15/100;
+	$('#load').css('width',cincoporcento);
+	$('#load').css('height',cincoporcento);
+	$('#load').css('top',($(window).height()/2)-cincoporcento/2);
+	$('#load').css('left',($(window).width()/2)-cincoporcento/2);
+	$('#load').css('z-index',999);
+	//tentativa de acessar com ajax:
+	dataenvio="chave="+chave+"&ini="+ini+"&fim="+fim;;
+	$.ajax(
+		{
+			type: "POST",
+			url: "acervom.php",
+			data: dataenvio,
+			beforeSend: function() {
+				//antes de enviar (por um aviso de loading etc...)
+			},success: function(txt) {
+				//sucesso:
+				$('#load').remove();
+				$('#overlay').remove();
+				//deletar todo conteudo do quadpreto
+				$(".todoconteudoquadro").html('');
+				$(".todoconteudoquadro").append("<div id='busca'></div>");
+				$("#busca").css('position', 'absolute');
+				$("#busca").css('width',$("#quadPreto").width()*95/100);
+				$("#busca").css('height',$("#quadPreto").height()*95/100);
+				$("#busca").css('top',$("#quadPreto").height()/2-$("#busca").height()/2);
+				$("#busca").css('left',$("#quadPreto").width()/2-$("#busca").width()/2);
+				$("#busca").css('overflow-x','hidden');
+				$("#busca").html(txt);
+			},error: function(txt) {
+				// em caso de erro você pode dar um alert('erro');
+				alert("Erro AJAX. Informe o Rosh Internet!!!");
+			}
+		}
+	);
+
+
+}
+
+function buscarpor(tema,chave,tags)
+{
+	abrirmenu();
+	$(".todoconteudoquadro").html('');
+	$("#quadPreto").append("<img  id='backimg' src='backimg.png' width='48' height='48' style='cursor:pointer' onClick='abrirmenu()'>");
+	$("#backimg").css('position','absolute');
+	$("#backimg").css('top',-24);
+	$("#backimg").css('left',-24);
+	//overlay:
+	$('body').append('<div style="background-color:#000; opacity:0.6; position:absolute; width:100%; height:100%; z-index:99; top:0; left:0" id="overlay"></div>');
+	//gif de loading:
+	$('body').append('<img src="load2.gif" style="position: absolute;" id="load">');
+	cincoporcento=$(window).width()*15/100;
+	$('#load').css('width',cincoporcento);
+	$('#load').css('height',cincoporcento);
+	$('#load').css('top',($(window).height()/2)-cincoporcento/2);
+	$('#load').css('left',($(window).width()/2)-cincoporcento/2);
+	$('#load').css('z-index',999);
+	//tentativa de acessar com ajax:
+	dataenvio="";
+	if($.isArray(tags) && tags[0]!=""){
+		dataenvio+="tags[]="+tags[0];
+		for(var i=1;i<tags.length;i++){
+			dataenvio+="&tags[]="+tags[i];
+		}
+	}else if(tags!=0){
+		dataenvio+="tags[]="+tags;
+	}
+	if(tema!=0){
+		if(dataenvio==""){
+			dataenvio += "tema="+tema;
+		}else{
+			dataenvio += "&tema="+tema;
+		}
+	}
+	if(chave!=0){
+		if(dataenvio==""){
+			dataenvio += "chave="+chave;
+		}else{
+			dataenvio += "&chave="+chave;
+		}
+	}
+	$.ajax(
+		{
+			type: "POST",
+			url: "buscaavancada.php",
+			data: dataenvio,
+			beforeSend: function() {
+				//antes de enviar (por um aviso de loading etc...)
+			},success: function(txt) {
+				//sucesso:
+				$('#load').remove();
+				$('#overlay').remove();
+				//deletar todo conteudo do quadpreto
+				$(".todoconteudoquadro").html('');
+				$(".todoconteudoquadro").append("<div id='busca'></div>");
+				$("#busca").css('position', 'absolute');
+				$("#busca").css('width',$("#quadPreto").width()*95/100);
+				$("#busca").css('height',$("#quadPreto").height()*95/100);
+				$("#busca").css('top',$("#quadPreto").height()/2-$("#busca").height()/2);
+				$("#busca").css('left',$("#quadPreto").width()/2-$("#busca").width()/2);
+				$("#busca").css('overflow-x','hidden');
+				$("#busca").html(txt);
+			},error: function(txt) {
+				// em caso de erro você pode dar um alert('erro');
+				alert("Erro AJAX. Informe o Rosh Internet!!!");
+			}
+		}
+	);
+
+}
+
+/*
+ESTA AQUIIIIIIIIIIIIIIII!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function inicio(){
+	$.ajax(
+		{
+			type: "POST",
+			url: "suaUrl.php",
+			data: "var=1&var2=0",
+			beforeSend: function() {
+				//antes de enviar (por um aviso de loading etc...)
+			},success: function(txt) {
+				//sucesso:
+			},error: function(txt) {
+				// em caso de erro você pode dar um alert('erro');
+			}
+		}
+	);
+}
+
+*/
+function abrirmenu(){
+	$("#backimg").remove();
+	$(".todoconteudoquadro").html("<a onClick='entrarEmTema(\"CeH\",0)'><img src='bot/cehbut.png' class='menuimg'></a><a onClick='entrarEmTema(\"Manhigut\",0)'><img src='bot/manhigutbut.png' class='menuimg'></a><br><a onClick='entrarEmTema(\"Israel\",0)'><img src='bot/israelbut.png' class='menuimg'></a><a onClick='entrarEmTema(\"Shoa\",0)'><img src='bot/shoabut.png' class='menuimg'></a><br><a onClick='entrarEmTema(\"Judaismo\",0)'><img src='bot/judaismobut.png' class='menuimg'></a><a onClick='entrarEmTema(\"Sionismo\",0)'><img src='bot/sionismobut.png' class='menuimg'></a><br><a onClick='entrarEmTema(\"MeJ\",0)'><img src='bot/mejbut.png' class='menuimg'></a><a onClick='entrarAM(0,0,15)'><img src='bot/ambut.png' class='menuimg'></a><br><a onClick='entrarEmTema(\"Chazit\",0)'><img src='bot/docbut.png' class='menuimg'></a><a onClick='entrarEmTema(\"Busca\",0)'><img src='bot/upbut.png' class='menuimg'></a>");
+			$(".menuimg").css('cursor','pointer');
+			$(".menuimg").css('width',$("#quadPreto").width()/2.01);
+			$(".menuimg").css('height',$("#quadPreto").height()/5);
+			$("img .menuimg").attr('onClick', "entraEmTema(0,0)");
+}
+</script>
+
+<script>
+
+$(document).ready(function(){
+	$('#copyr').css('left', $(window).width()/2 -$('#copyr').width()/2 );
+	$('.allcontainer').append('<img id="armario" src="armariofechado.png" style="position:absolute; z-index:-1;cursor:pointer" onClick="quadPreto()"/>');
+		var img = $("#armario"); // Get my img elem
+	var pic_real_width, pic_real_height;
+	$("<img/>") // Make in memory copy of image to avoid css issues
+    	.attr("src", $(img).attr("src"))
+    	.load(function() {
+			$('#armario').css('height',$('#bgimg').height()*80/100);
+			mw = $('#armario').width()/2;
+			$('#armario').css("left",($('#bgimg').width()/2-mw));
+			$('#armario').css('top',$('#bgimg').height()-$('#armario').width()*85/100);
+			tamanho = $('#bgimg').width()/2;
+			$('.allcontainer').css('top',0);
+			if($(window).width()>=800){
+				$('.allcontainer').css('left',($(window).width()/2)-tamanho);
+			}else{
+				$('.allcontainer').css('left',0);
+			}
+
+    });
+
+});
+
+function removercont(id,nome){
+	simounao = confirm('Você realmente deseja deletar o conteudo com o nome "'+nome+'"');
+	dataenvio = "id="+id;
+	if(simounao){
+		$.ajax(
+		{
+			type: "POST",
+			url: "removerconteudo.php",
+			data: dataenvio,
+			beforeSend: function() {
+				//antes de enviar (por um aviso de loading etc...)
+			},success: function(txt) {
+				//sucesso:
+				alert(txt);
+			},error: function(txt) {
+				// em caso de erro você pode dar um alert('erro');
+				alert(txt);
+			}
+		}
+	);
+	}
+}
+
+</script>
+</div>
+<div id="box">
+
+RAGAZZO GIGANTE<br>Peilim, bem vindos ao novo Armário Online da Vaadat Tik!<br>Usem com sabedoria todas as ferramentas que ele proporciona a vocês. Caso tenham alguma dúvida sobre como usá-lo pergunte a algum membro das vaadot Tik ou Internet, ou vejam o vídeo-tutorial que está no superpack.<br><br>Esse é um aviso. Sempre que entrar no armário veja a data do último aviso e leia, pois os avisos são importantes!<br><br>Chazak Ve Chibur!
+<br /><br />
+Obs: Odiamos Internet Explorer.<br />
+<p style="text-align:right">
+Sinceramente, Vaadot Internet e Tik.
+</p>
+</div>
+</body>
+</html>

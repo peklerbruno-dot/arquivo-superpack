@@ -1,0 +1,311 @@
+<style>
+.tabelabusca {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+}.tabelabusca table{
+	width:100%;
+	margin:0px;padding:0px;
+}
+.tabelabusca tr:nth-child(odd){ background-color:#ffaa56; }
+.tabelabusca tr:nth-child(even)    { background-color:#ffffff; }
+.tabelabusca td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:14px;
+	font-size:19px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.tabelabusca tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabelabusca tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabelabusca tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}.tabelabusca tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.divbusca{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding: 7px;
+}
+.tabelabusca tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabelabusca tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.umpoucomais {
+	display:none;
+}
+
+</style>
+<div class="divbusca">
+	Buscar no A.M.: <input type="text" id="palavrachave"/><input type="button" value="Buscar" onclick="buscainterna();"/>
+</div>
+<script>
+nini=0;
+nfim=30;
+function prov1(){
+	$('#tamcerto').css("height", $('#busca').height() - $('.divbusca').height()*2);
+}
+prov1();
+
+function buscainterna(){
+	palavrachave = $("#palavrachave").val();
+	entrarAM(palavrachave,0,15);
+}
+
+function mostramais(e){
+e.next('.umpoucomais').slideToggle();	
+e.html("");
+}
+
+</script>
+<div id="tamcerto" style="overflow-y: auto; overflow-x:hidden;">
+<div class="tabelabusca">
+<table>
+<tr>
+ <td>Peulot de Sábado - página 2</td>
+</tr>
+    <tr><td><b>Tema:</b>  Conflito Israel-Palestina<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: Devido ao cenário atual acreditamos que o conhecimento do tema Israel e conflito arabe-israelense seja de extrema importância para nossos chanichim utilizarem para o dia a dia deles.
+
+Objetivos:
+QOC conheçam mais a respeito da história do conflito e sua “trajetória”;
+QOC sejam capazes de defender posições e formem suas opiniões;
+QOC tenham uma noção básica da linha do tempo da criação de Israel até os dias atuais.
+<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: 
+Dinâmica: WAR
+fazer um mapa com os territórios de israel gigante (tabuleiro)
+
+Quatro grupos: IDF, palestinos, hamas, israelenses extremistas (haganá)
+
+IDF (exercito israelense): 
+Defender a soberania e a integridade territorial do Estado de Israel, deter todos os inimigos, e coibir todas (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2172'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> 7 - relação judaísmo e sionismo + qual minha opinião?<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim entendam a relação judaísmo-sionismo e comecem a formular sua opnião sobre o assunto<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: Começa com retrospectiva histórica do sionismo, focando na relacao com o judaísmo.
+1 - porque Israel? Deus promete a terra para os judeus - teatro
+2 - pré aliot: judeus religiosos que vão para Israel no fim da vida morrer e serem enterrados na terra prometida. teatro debao no séc 18 tendo cr(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=538'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> a whole new world - iom haatzmaut<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - introduzir o conceito de sionismo;
+- entender como se deu a construção do Estado de Israel;
+- mostrar como foi a construção de Israel e como ela está atualmente;
+- mostrar os setores responsáveis para a construção de um Estado;
+- mostrar e demonstrar o envolvimento da população e da juventude na construção do Estado de Israel;<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: QG: jogo do dedo com a históriados judeus e de israel
+CONTEXTO: pós guerra, a ONU convocou os shovavim para a criação do Estado de Learsi. Eles são responsáveis por criarem os 4 pilares principais da sociedade: educação, saúde, agricultura e moradia.
+- eles terão, antes de se dividirem n(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1425'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Aliot <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: 
+O número de brasileiros indo morar em Israel cresce cada vez mais e é importante questionar os motivos para isso acontecer;
+Objetivos:
+- Questionar se essas aliot recentes são de fato sionistas ou se são somente uma fuga (ou se essa fuga é sionismo);
+- Questionar qual a nossa relação com Israel, só usamos quando nos é cômodo? Deveria ser diferente?;
+- Conhecer a Lei do Retorno;<br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>: Qg: mímica complexa;
+
+- Chanichim começam a peulá dentro de uma sala, não explicamos muita coisa, deixamos eles lá e saímos;
+- Primeira sala: terrorismo poético (deixar o mais desconfortável possível, sons, fumaça, cheiro ruim);
+- De tempos em tempos a gnt entra e coloca anúncios (1 f(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1278'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Almoço Maluco<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim tenham questionamentos e conversas com os madrichim sobre alguns assuntos polemicos de judaismo e sionismo<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: Questionamentos:
+1) Or la Goym, nós somos??
+2) Israel está aqui hoje somente pela Shoá?
+3) Pós Sionismo?(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=310'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Antissemitismo<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - problematizar a nova realidade do antissemitismo que existe hoje: qual a relação com Israel?
+- questionar quais as causas
+- como evitar? O que podemos fazer para combater isso?
+<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: QUEBRA GELO - eles dão, competição!
+
+
+
+DESENVOLVIMENTO
+
+A brisa é provocar a ideia de que um "bom comportamento" possa impedir o antissemitismo - são castigados com cada vez menos critério
+
+Estão no *Recanto Transcendental Eva e Adão*, uma sociedade hippie na qual o lobo se deita com(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=812'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Auto-avaliaçao, avaliaçao grupal, o que queremos/necessitamos para esse semestre<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: vide tema<br><b>Peulá dada para o shnat</b> 2015<br><b>Desenvolvimento</b>: Introdutória: A Dani se apresenta com os shovavim e só Teté e Lobs se apresentam com os amelim, eles tem que entender o porque a Dani não está (saiu, deu um tempo, enfim, é apenas merakezet e não madricha de shovavim - entendem o que é uma merakezet, o que ela faz e que em alguns chuguim exi(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=39'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Caso Dreyfus<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -entender o caso Dreyfus e como ele influenciou na criação do sionismo
+-entender o que é o sionismo
+Objetivos Específicos:
+-tratar a questão de generalização
+-trazer o que é o sionismo para a Chazit (ideologia)
+<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: -RPG: nome, idade, escalão do exército, etnia, curiosade e missão
+-Inicialmente, os soldados vão ter que procurar os elementos do ataque que eles sofrerão (partes da bandeira, bisnaga de água, tinta para o rosto, toca de banho (capacete), luva de dentista, bexigas, barbante)
+-Quando encontra(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=598'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Caso Dreyfus + hertzl<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Explicar como surgiu o sionismo politico através do caso dreyfus e hertzl<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: 1- Os chanichim iram atras de partes de uma noticia contando a historia de um "caso dreyfus" palestino ( atual)
+Depois fazemos um tribunal onde um grupo é a favor e outro é contra condenar o palestino
+
+Depois mostramos a segunda parte daA noticia ( de que era uma fraude) e incita que os que con(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=33'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> caso dreyfus e criação do sionismo politico<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: objetivos:
+explicar o que foi o caso dreyfus e suas implicações na idealização do sionismo político e na criação do estado de israel
+discutir a necessidade de haver um estado judeu, fazendo um paralelo com as perseguições e o antissemitismo
+discutir o antissemitismo disseminado no século xx e como ele se assemelha ao que vemos hoje.
+<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: TEMA DA DORMIDA: Israel
+RACONAL DA ESCOLHA DE TEMA PARA A DORMIDA:  tendo em vista a atual guerra entre Israel e o Hamas, viu-se um aumento no antissemitismo mascarado de antiossinismo entre indivíduos que menos conhecem sobre o conflito e sua história. Por isso, através dessa dormida, gostaría(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2167'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chanichim como chalutzim - Passos da criação de Israel<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC reconheçam a importância de Israel;
+QOC conheçam e aprendam mais sobre a cultura israelense;
+Explicar o que são os kibbutzim e sua importância no estado judeu e quem foram os chalutzim;
+QOC se divirtam falando de Israel e que gostem de Israel #sionismo
+<br><b>Peulá dada para o shnat</b> 2032<br><b>Desenvolvimento</b>: Dinâmica: 
+quebra gelo -
+1. cada um vai escrever na testa do amiguinho uma palavra relacionada ao judaísmo e eles precisam adivinhar com perguntas de sim e não.
+2. futebol israelense.
+
+desenvolvimento - entramos em uma máquina do tempo e fomos parar no dia 14 de maio de 1948 (INDEPENDÊNCIA(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2127'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit Geral<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC criem uma música nova 
+QOC percebam que existe uma "postura chazit" e no que ela acredita.
+QOC entendam a estrutura(Hanaga, Kvutzot,Vaadot e Mokdim)
+QOC descubram o que é Chazit para eles
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Retomar a ultima peulá, explicando o que é a pulseira para quem faltou e dar o papel para eles escreverem.
+
+Quebra-gelo:futebol-israelense
+
+CONTEXTO:criar uma boa empresa de brinquedos
+
+DINÂMICA:dividir três grupos que vão revezar pelas 3 bases(chanichim se mexem),que são as áreas da Ch(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1079'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit na sociedade judaica atual<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Discutam a importância da Chazit e das tnuot em geral na comunidade judaica.
+<br><b>Peulá dada para o shnat</b> 2015<br><b>Desenvolvimento</b>: Carta do Marcelão:
+
+Saí da Chazit em 1971. Sou da turma do Machon ´69´.
+Desde sempre, trabalhei pela comunidade judaica de São Paulo e Brasil e já fui por diversas vezes, conselheiro na Federação Israelita. Escrevo não por um motivo de festa, mas de consternação e de imensa tristeza.
+(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=29'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit, um sentimento que faz amar<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC chanichim reflitam sobre o papel da tnuá no mundo atual e na vida deles
+QOC se identifiquem mais com a chazit e entendam a importância dela na vida deles
+QOC tenham pilha para a machané ebaaaaa
+
+Racional: Em meio a muitos chanichim que não tem muita noção da tnuá, faltando um pouco da identificação com o movimento e entender o que eles realmente sentem na chazit, é necessário abordar um pouco mais sobre o sentimento de chazit e pertencimento a tnuá.
+
+<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: Dinâmica: 
+QG: Futebol Israelense
+Dizer que a chazit vai acabar, tá saturada, e por isso precisam criar uma nova tnuá
+Dividir em 4 grupos, cada um precisa criar uma tnuá
+Mini competições para conseguir características para as novas tnuot (quem for ganhando vai escolhendo as característic(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2183'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit: motivações ontem e hoje<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: Primeiro sábado do semestre UHUUUUUUUL. Assim como o semestre inicia-se cheio de motivações, é importante para os chanichim conhecerem o quais foram os motivos que levaram a chazit a ser criada e a motivação para continuar com o movimento. é importante que eles continuem no processo de questionar os motivos e próprias motivações dentro da Chazit. 
+
+Objetivos: 
+- Conhecer a história da Chazit
+- Buscar mais motivos e motivações para estarem na Chazit 
+- Pilhar o semestre e continuar no gás pós central <br><b>Peulá dada para o shnat</b> 2021<br><b>Desenvolvimento</b>: Os chanichim receberão uma carta contextualizadora da CIP destinada a eles, que são peilim de 1960 e deixaram de ser um grêmio juvenil judaico e educativo para um movimento juvenil judaico sionista. Precisam resolver problemas que interferem na sua criação e continuidade do movimento. Existem d(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1482'>Clique Aqui</a></span></sub></td></tr>
+</table>
+<table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(sionismo,-16,-1)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('sionismo',31,46)">Próxima página-></a></u></center>
+<tr>
+ <td>Peulot de Machané: - página 2</td>
+</tr>
+    <tr><td><b>Tema:</b>  Movimentos Juvenis e Seu Papel Atualmente - Vamo&#039; A Portarnos Mal<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: qoc se questionem sobre o papel e a importância das tnuot nos dias de hoje
+qoc tracem um paralelo com a função das tnuot antigamente e hoje em dia
+qoc conheçam o motivo da criação das tnuot 
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Quebra Gelo: Rua e avenida 
+
+Dinâmica: primeiro eles vão passar por três museus que vão contar a história das tnuot.
+1939- 1945: Holocausto - Luta do Shomer e do Betar e sua participação na shoa. 
+1948: Papel das tnuot para a criação do Estado de Israel
+2022 continua: atualidades das t(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8830'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> 7 de outubro<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional:  Achamos muito importante educar sobre 7 de outubro, porém trazendo temas mais próximos deles. Assim, vemos na realidade da sociedade brasileira múltiplas opinioes sobre o conflito, sobre sionismo e sobre ser judeu e sentimos a necessidade de fazer os chanichim refletirem como isso impacta eles. Além disso, sentimos que muitas vezes o olhar dos chanichim para esse tema é pouco crítico, e queremos incentivar que entendam Israel sob outros vieses e consigam também ter uma visão mais crítica.
+
+Objetivos:
+- pensar sobre a percepção da diáspora (especialmente do brasil) sobre israel  
+- refletir sobre quais são as minhas ideologias e valores e até que ponto as minhas lutas se convergem e se divergem
+           - identidade em conflito
+- refletir sobre o posicionamento da chazit: como ser sionista e politizado na diáspora
+- Incentivar os chanichim a enxergarem Israel sob pontos de vista diferentes dos que são apresentados pela escola e pela mídia, gerando um olhar crítico e analítico
+- Identificar qual imagem é projetada em nós como judeus sionistas na diáspora
+- Usar o antissemitismo e israel em si para falar como diferentes pessoas se apropriam dos temas “israel” e “antissemitismo” <br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: QG: se Israel fosse um…
+
+Dinâmica:
+Momento 1:
+- situação: Fazer como se fosse uma matéria do jornal nacional (falando que vai ter uma manifestação muito grande na Paulista. FAZER UMA MATÉRIA DE JORNAL -> não se sabe se foi antissemitismo porque a blusa é de Israel ou porque era do Bri(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10392'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> A extensão da tnuá pro meu dia a dia (coerência)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que eles percebam a importancia que atnua a partir de conteudos e expericas na vida deles
+
+Racio: Nós madrichim acreditamos que todo nosso trabalho tem de ser significativo para eles e um passo para ele chegarem a essa tal significancia é eles usarem o que aprendem na vidinha deles<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: PEULA DO SUJAHHHHHHHHH
+
+Quebra Gelo: Torta na Cara com conteúdos já passados na chazit
+sionismo, judaismo no dia a dia, problema da agua, conscniencia grupal, respeito, liberdade
+
+A sujeira representa tudo o que foi passado e o que eles aprenderam na tnua e esse conhecimento tem de ser extern(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3328'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> A Nossa Relaçao com Israel <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Queremos transmitir para os chanichim a relacao ideolõgica que a Chazit possui com Israel. Sendo a Aliâ como realizaçao máxima do Chaver chazitiano e o Shnat como parte fundamental do processo.
+
+Junto a isso, apresentar Israel como lar do povo judeu e um refúgio. Pensar a ideia de lar com eles e o que eles tomam como o lar deles.<br><b>Peulá dada para o shnat</b> 2037<br><b>Desenvolvimento</b>: Haverá um madrich perdido que esqueceu onde ele mora e como é o seu lar (Israel). Os chanichim vão ter que ajudá-lo a encontrar seu lar conforme vão passando em bases de pessoas que marcaram a trajetõria desse madrich e sua ida para Israel.
+O madrich perdido vai ser quem vai andar com os chan(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10906'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Anti sionismo (BDS e natureikarta)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Por que algumas pessoas são contra o Estado de Israel e qual a relevância disso?
+Que eles conheçam as diferentes facetas antissionistas e sionistas
+
+OBSERVAÇÕES:
+-AVISAR OS MADRICHIM QUE ELES PODERÃO SER ATACADOS POR BOLINHAS DE PAPEL NO MEIO DA NOSSA PEULÁ
+-3 MADRICHIM + 1 PT porque a Mimi não vai estar
+<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Q-G: Futebol israelense, einaim raglaim
+
+DINÂMICA:
+
+Teatrinho dirigido:
+Há muito tempo atrás o planeta Terra era habitado por humanos e "tuilos". Os tuilos foram expulsos há 4.000 anos atrás e depois desse tempo eles quiseram voltar para a sua terra naturalmente, mas os humanos continuaram(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6275'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Arte (vanguardas)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim entendam o conceito de vanguardas, e que toda vanguarda se relaciona ao momento em que ocorre.<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: Os chanichim ser&#227;o divididos atrav�s de um ca�a- celofane. Existem 6 peda�os de cada cor, e depois de encontrarem o seu, devem encontrar as outras pessoas que tem a mesma cor.
+A peul� vai funcionar com bases, em que os grupos v&#227;o girando. Em um jogo de stop, com cinco categorias, os grupo(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=640'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> as imagens que compramos são reais<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -Que os chanichim se questionem sobre os inputs que recebem, e como lidam com eles: acreditam, questionam ou refutam
+<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: Os chanichim vão estar na discoteca e recebem a visita do lobo mal que esta revoltado com a injustiça que sempre fizeram com ele.  Os chanichim saem atrás da verdade aonde terão bases que contarão a historia. É UM CANIBAL
+Lobo mal: Era uma ótima pessoa
+Porquinho da índia: Lobo mal era uma (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=1612'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Barco do Tz: Como eu me moldo pelo ambiente que eu estou? É possível perder minha identidade ao <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Fio condutor:
+Barco de Teseu
+
+Racional:
+Acreditamos que uma peula sobre identidade é fundamental para esta idade, pois é quando eles estão começando a descobrir o mundo (seus gostos, sua personalidade, sua relação com o outro, suas mudanças e como eles se moldam a determinados ambientes). Além disso, o tema e fio condutor se encaixam muito no trecho do dia: "Eu deixo e recebo um tanto".
+
+Objetivos:
+Fazer os chanichim refletirem sobre os diferentes fatores que formam suas identidades
+Pensar sobre as mudanças que ocorrem com os chanichim nesta fase da vida
+Falar sobre como a gente se molda a partir da relação com o outro e do ambiente que estamos
+Fazer os chanichim refletirem sobre se existe um limite para a mudança, um ponto onde a identidade se perde
+Apresentar a história do Navio de Teseu para os chanichim
+Que todos se divirtam
+<br><b>Peulá dada para o shnat</b> 2033<br><b>Desenvolvimento</b>: Desenvolvimento:
+Tz tem um barco e com o tempo ele fica velho e quebrado, por isso precisaremos de peças novas para reconstruir o barco e pediremos para eles ajudarem.
+Faremos um teatrinho (cada um vai ser uma parte velha fodida do barco e o Tz vai ser o Tz) para contextualizar o que está aconte(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10925'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> BOM SOM NARIO<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -trazer o questionamento de até onde eu me sinto representado pela chazit, e até onde a chazit pode ir em questão de representação
+-trazer a ideia de que quando estou vestindo a camisa da chazit, o que represento, e se isso me representa por inteiro
+<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Os chanichim serão convidados para participarem do programa Show do Peineirão podendo entrar na Peilut. 
+Como o jogo funciona: 
+
+X
+Política
+Ideologia
+Perfil Chazitiano
+Perfil do chanich Chazitiano
+50 pontos (eles x eles)
+2 estados pra dois povos. Chanich explica pro próprio pai. 
+Juda�(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7520'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Borohov + Chad haam + hertzl<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: •	Que eles se questionem se Israel ainda precisa que os judeus façam aliá ou se, hoje, a aliá é um fim em si próprio.<br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: Analogia com Mágico de Oz. A kvutzá é a Dorothy e eles vão receber a ideologia (sionismo) -> Ozionismo. 
+Eles querem ir para Oz e tem que convencer o Homem de Lata, o Espantalho e o Leão a irem para Oz com eles. 
+Cada um dos personagens tem a ideologia de uma tnuá diferente (NOAM, Dror e Sho(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3117'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> CANIBELO<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: OBJETIVOS:
+QOC vejam a história de uma forma diferente e divertida. 
+QOC gastem energia.
+QOC se sujem.
+QOM sujem os chanichim.
+<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: peula de suja - fotos antigas precisam imitar o cabelo da galera (moda, acontecimentos historicos) - canibal bagunca o cabelo
+DESENVOLVIMENTO:
+Vamos explicar para os chanichim que eles serão divididos em décadas (40, 50, 60, 70, 80, 90 e 2000) e que ao longo da peulá, eles terão que encontrar (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8080'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Caso Dreyfus<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Geral:que os chanichim identifiquem as manifestações antissemitas presentes na história de israel. Especifico: que os chanichim entendam que o caso Dreyfus foi um ponto crucial para criação do estado de israel e do inicio do sionismo.<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: Introdutória: detetive de piscar (aquele que vc dá papelzinhos com vitima, detetive, assassino e anjo pros chanichim)
+Desenvolvimento: Roubaram o celular de um dos madrichim, e os chanichim têm que descobrir quem foi através de um mini detetive. Os madrichim irão se esconder pelo sitio e os ch(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=1579'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Caso Dreyfus e Herzl<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: explicar para os chanichim o conceito de sionismo e sua origem através do Caso Dreyfus e entender a opiniao deles sobre a situação Israel palestina hoje em dia ( sicha; qoc reflitam e questionem sobre o preconceito judaico ao longo da historia e como isso pode ser mudado.<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: Qg: duas rodas com duplas sendo que uma pessoa não vai ter dupla e vai piscar para as pessoas da frente ( lugar com cadeira) pracinha
+Os chanichim iram atras de partes de uma noticia contando a historia de um "caso dreyfus" e fazemos um tribunal em que um grupo é a favor e outro é contra condena(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7397'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit sem ideologia? Como seria a sua tnuá?<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -Os chanichim refletirem sobre o que se identificam com a chazit, pensando como seria o movimento juvenl ideal deles e comparando
+-Que os chanichim começem a perceber que a mudança dentro da chazit também depende deles<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Separamos eles em grupos, e fazemos várias rodadas de "até onde você vai?" para ganhar dinheirinho. Quando tiverem acumulado bastante, fazemos leilões com elementos de movimento juvenil
+-Ideologia
+-Sionismo
+-Judaísmo
+-Muitos chanichim
+-Madrichim pilhados
+-Piscina
+-Escorregador
+-Peula de(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6296'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Chazit: a imperfeição natural<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -QOC entendam a heterogeneidade da peilut
+-QOC entendam os defeitos da Chazit
+-QOC fiquem mais seguros para fazer parte da peilut
+-QOC entendam a importância da capacitação<br><b>Peulá dada para o shnat</b> 2025<br><b>Desenvolvimento</b>: Quebra-gelo: HIA
+
+Começamos com uma apresentação de Jornal Televiso. Os repórteres em campo Tales, o calvo e Bib, la quesadilla, estão cobrindo uma matéria sobre o movimento juvenin Chazit Hanoar.
+- Comemoração de 200 anos da criação da coxinha.
+- Entrevista com um Bone Alef nada prepa(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=8282'>Clique Aqui</a></span></sub></td></tr>
+    </table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(sionismo,-16,-1)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('sionismo',31,46)">Próxima página-></a></u></center>
+</div>
+</div>

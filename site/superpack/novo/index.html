@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SuperPack Chazit SP</title>
+<!--jquery src -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link href="css/superpack-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
+<!-- Requirements JS imports -->
+<link href="scrollbarplugin/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script src="scrollbarplugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="script/jquery.mousewheel.min.js"></script>
+<script src="script/Menu.js"></script>
+
+<!-- Important functions -->
+<script>
+  function escondeLogo(){
+    $('#logodiv').animate({left: $('#logodiv').width()*-1+30, queue: false},1500,"easeOutExpo",
+      function(){ $('#logo').attr('src', 'img/logo_min.png'); $('#logo').width(""); $('#logo').height(Wheight*0.15); $('#logodiv').animate({left: 0},1500,"easeOutExpo"); $('#logo').fadeIn(); $(this).attr('onmouseover','')});
+    $('#logo').fadeOut()
+  }
+  
+  var ajax_response;
+  function putInContent(argURL, callbackf)
+{
+  $.ajax(
+    {      
+      type: "POST",
+      url: argURL,
+      beforeSend: function() {
+        //antes de enviar (por um aviso de loading etc...)
+        $('#preloader').show();
+        $('#status').show();
+      },success: function(txt) {
+        //sucesso:
+        //alert(txt);
+        ajax_response = txt;
+        $('#status').fadeOut(); // will first fade out the loading animation
+              $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        callbackf();
+      },error: function(txt) {
+        // em caso de erro você pode dar um alert('erro');
+        alert("Erro AJAX. Informe o Rosh Internet!!!");
+      }
+    }
+  );
+  
+}
+</script>
+
+<!-- Some global Utility variables -->
+<script>
+  $(document).ready(function(){
+    Wheight = $(window).height();
+    Wwidth = $(window).width();
+  });
+</script>
+
+<!-- Cultura inútil -->
+<script>
+var cultura=new Array();
+
+cultura[0]='Categoria: Animais<br>- Ratos não vomitam.';
+
+cultura[1]='Categoria: Animais<br>- Os ursos polares são canhotos.';
+
+cultura[2]='Categoria: Humano<br>- Você pisca aproximadamente 25 mil vezes por dia.';
+
+cultura[3]='Categoria: Nacionalidades<br>- Os russos atendem ao telefone dizendo \"Estou ouvindo\".';
+
+cultura[4]='Categoria: Mundo<br>- O Oceano Atlântico é mais salgado que o Pacífico.';
+
+cultura[5]='Categoria: Animais<br>- O elefante é o único animal com quatro joelhos.';
+
+cultura[6]='Categoria: Humano<br>- A cada ano, 98% dos átomos do seu corpo são substituídos.';
+
+cultura[7]='Categoria: Humano<br>- Rir durante o dia faz com que você durma melhor a noite.';
+
+cultura[8]='Categoria: Humano<br>- Não da para  lamber o próprio cotovelo!';
+
+cultura[9]='Categoria: Curiodisades<br>- No baralho, o rei de copas é o único que não tem bigode';
+
+cultura[10]='Categoria: Curiosidades<br>- O som dos passos do E.T no filme \"E.T\" foram feitos com gelatina';
+
+cultura[11]='Categoria: Animais<br>- Uma galinha já sobreviveu 18 meses sem a cabeça';
+
+cultura[12]='Categoria: Curiosidades<br>- Senhor Cabeça-de-Batata foi o primeiro brinquedo a ter uma propaganda de TV';
+
+cultura[13]='Categoria: Pessoas<br>- Harry Houdini moreu no Halloween';
+
+cultura[14]='Categoria: Fobias<br>- Pogonofobia é o medo de barbas';
+
+cultura[15]='Categoria: Animais<br>- Os egípcios acreditavam que os ouriços curavam a calvice';
+
+cultura[16]='Categoria: Mundo<br>- A Terra fica 100 kg mais pesada todo dia devido a queda de pó espacial';
+
+cultura[17]='Categoria: Pessoas<br>- A Monalisa não tinha sobrancelhas';
+
+cultura[18]='Categoria: Mundo<br>- Existem mais estrelas no espaço do que grãos de areia na Terra';
+
+cultura[19]='Categoria: Humano<br>- O cérebro tem a mesma consistência que um tofu';
+
+cultura[20]='Categoria: Animais<br>- Hipopótamos matam mais humanos que qualquer animal africano';
+
+cultura[21]='Categoria: Curiosidades<br>- O Mc Donald é o maior distribuidor de brinquedos do mundo';
+
+cultura[22]='Categoria: Curiosidades<br>- A única comida que não apodrece é o mel';
+
+cultura[23]='Categoria: Curiosidades<br>- No baralho, o rei de copas é o único que não tem bigode';
+
+cultura[24]='Categoria: Curiosidades<br>- O som dos passos do E.T no filme <i>E.T </i>foram feitos com gelatina';
+
+cultura[25]='Categoria: Animais<br>- Uma galinha já sobreviveu 18 meses sem a cabeça';
+
+cultura[26]='Categoria: Curiosidades<br>- Senhor Cabeça-de-Batata foi o primeiro brinquedo a ter uma propaganda de TV';
+
+cultura[27]='Categoria: Pessoas<br>- Harry Houdini moreu no Halloween';
+
+cultura[28]='Categoria: Fobias<br>- Pogonofobia é o medo de barbas';
+
+cultura[29]='Categoria: Humano<br>- Se você gritar por 8 anos, 7 meses e 6 dias, produzirá energia o suficiente para esquentar uma xícara de café';
+
+cultura[30]='Categoria: Animais<br>- Os egípcios acreditavam que os ouriços curavam a calvice';
+
+cultura[31]='Categoria: Mundo<br>- A Terra fica 100 kg mais pesada todo dia devido a queda de pó espacial';
+
+cultura[32]='Categoria: Pessoas<br>- A Monalisa não tinha sobrancelhas';
+
+cultura[33]='Categoria: Mundo<br>- Existem mais estrelas no espaço do que grãos de areia na Terra';
+
+cultura[34]='Categoria: Humano<br>- O cérebro tem a mesma consistência que um tofu';
+
+cultura[35]='Categoria: Animais<br>- Hipopótamos matam mais humanos que qualquer animal africano';
+
+cultura[36]='Categoria: Animais<br>- O cavalo marinho é o peixe mais lento que existe';
+
+cultura[37]='Categoria: Mundo<br>- Um raio contêm energia para torrar 160 mil fatias de pão';
+
+cultura[38]='Categoria: Humano<br>- Um homem gasta em média 145 dias da sua vida se barbeando';
+
+cultura[39]='Categoria: Animais<br>- A água viva Turritopsis é biologicamente imortal';
+
+cultura[40]='Categoria: Humano<br>- Ficar acordado por 2 semanas pode te matar';
+
+cultura[41]='Categoria: Pessoas<br>- Paris Hilton calça 43';
+
+cultura[42]='Categoria: Animais<br>- Girafas dormem entre 10 minutos e 2 horas por dia';
+
+cultura[43]='Categoria: Animais<br>- Um baiacu tem veneno suficiente para matar 30 pessoas';
+
+cultura[44]='Categoria: Animais<br>- Os babuínos já foram treinados pelos egípcios para servirem a mesa e esperar de pé até terminar a refeição';
+
+cultura[45]='Categoria: Curiosidades<br>- O Mc Donald é o maior distribuidor de brinquedos do mundo';
+
+cultura[46]='Categoria: Pessoas<br>- A pessoa mais rica já falecida é Elvis Presley';
+
+cultura[47]='Categoria: Animais<br>- As impressões do cachorro fica no seu nariz, assim como a impressão humana fica no polegar';
+
+cultura[48]='Categoria: Mundo<br>- Existem aproximadamente 5, 000, 000, 000, 000, 000, 000, 000, 000, 000,000 de bactérias vivendo no planeta Terra';
+
+cultura[49]='Categoria: Pessoas<br>- O recorde de levantamento de peso é de 472,5 kg, mais pesado que uma vaca';
+
+cultura[50]='Categoria: Curiosidades<br>- O título mais longo de um livro é de 670 palavras';
+
+cultura[51]='Categoria: Animais<br>- Sapos não gostam de bebida alcoólica';
+
+cultura[52]='Categoria: Pessoas<br>- Tom Anderson, criador do Myspace é a pessoa com mais amigos virtuais na internet ';
+
+cultura[53]='Categoria: Pessoas<br>- Wayne Allwine, a voz do Mickey, era casado com Russi Taylor, voz da Minnie';
+
+cultura[54]='Categoria: Curiosidades<br>- A mentira mais contada é \"Estou Bem\"';
+
+cultura[55]='Categoria: Animais<br>- As minhocas podem ter até 9 corações';
+
+cultura[56]='Categoria: Fobias<br>- A Anatidaefobia é o medo que um pato esteja observando você';
+
+cultura[57]='Categoria: Animais<br>- Vacas conseguem subir escadas, mas não conseguem descer';
+
+cultura[58]='Categoria: Curiosidades<br>- O nome inteiro da Barbie é Bárbara Millicent Roberts';
+
+cultura[59]='Categoria: Animais<br>- Flamingos são rosas por causa de sua alimentação';
+
+cultura[60]='Categoria: Curiosidades<br>- A única comida que não apodrece é o mel';
+
+cultura[61]='Categoria: Animais<br>- Se os tubarões ficarem de cabeça para baixo, eles entram em coma';
+
+cultura[62]='Categoria: Pessoas<br>- O cabelo de elvis era loiro';
+
+cultura[63]='Categoria: Animais<br>- As tartarugas podem respirar através de seus rabos';
+
+cultura[64]='Categoria: Animais<br>- As cordas das guitarras eram feitas originalmente de tripas de gato';
+
+cultura[65]='Categoria: Pessoas<br>- O piloto da Nascar Tim Flock é o único piloto da história a fazer um pit stop para retirar um macaco do carro';
+
+cultura[66]='Categoria: Humano<br>- Se você comer muita cenoura é possível que sua pele fique laranja';
+
+cultura[67]='Categoria: Curiosidades<br>- O super-homem é o super-herói mais retratado na TV';
+
+cultura[68]='Categoria: Humano<br>- A temperatura de um peido quando ele é criado é de 37º';
+
+cultura[69]='Categoria: Humano<br>- É possível morrer de rir';
+
+cultura[70]='Categoria: Humano<br>- Uma a cada setenta pessoas comem seu próprio ranho';
+
+cultura[71]='Categoria: Animais<br>- O rugido do leão pode ser ouvido a 8 km de distância';
+
+cultura[72]='Categoria: Pessoas<br>- Walt Disney recebeu um oscar, e 7 miniaturas pela branca de neve';
+
+cultura[73]='Categoria: Animais<br>- O recorde de vôo de uma galinha é de 13 segundos';
+
+cultura[74]='Categoria: Animais<br>- Coelhos não podem vomitar';
+
+cultura[75]='Categoria: Fobias<br>- Barofobia é o medo da gravidade';
+
+cultura[76]='Categoria: Mundo<br>- Cientistas descobriram álcool no espaço';
+
+cultura[77]='Categoria: Humano<br>- O fumante perde em média 2 dentes a cada ano';
+
+cultura[78]='Categoria: Humano<br>- A cor que mais acalma é o azul';
+
+cultura[79]='Categoria: Humano<br>- Pensar em músculos te faz ficar mais forte';
+
+cultura[80]='Categoria: Mundo<br>- A velocidade de rotação da Terra é de 1674.4 km/h';
+
+cultura[81]='Categoria: Animais<br>- A maior altura que um ovo já caiu sem quebrar foi de 213, 36 metros de altura';
+
+cultura[82]='1/30) elevado a 142943  é a probabilidae de, digitando letras aleatórias, escrever a peça Hamlet, de Shakspeare.';
+
+cultura[83]='Categoria: Curiosidades<br>- 12% é a chance de haver entre 10 pessoas, duas com a mesma data de aniverrsario.';
+
+cultura[84]='Categoria: Curiosidades<br>- 16 % é Probabilidade de, ao jogar dois dados, a soma dar 7.';
+
+cultura[85]='Categoria: Fobias<br>- Ablutofobia é o medo de tomar banho';
+
+cultura[86]='Categoria: Fobias<br>- Crometofobia ou crematofobia é o medo de dinheiro';
+
+cultura[87]='Categoria: Fobias<br>- Triscaidecafobia é o medo do número 13';
+
+cultura[88]='Categoria: Fobias<br>- Hipopotomonstrosesquipedaliofobia é o medo de palavras grandes';
+
+cultura[89]='Categoria: Fobias<br>- Hipengiofobia é o medo de responsabilidades';
+
+cultura[90]='Categoria: Fobias<br>- Ripofobia é o medo de defecar';
+
+cultura[91]='Categoria: Fobias<br>- Afobia é o medo da falta de fobias';
+
+cultura[92]='7% dos americanos acredita que Elvis esta vivo. 25% dos americanos acha que Sherlock Holmes existiu. 25% também acreditam em fantasmas, e 10% dizem ter visto um.';
+
+cultura[93]='A Microsoft gasta mais atendendo ligações de usuários com problemas que produzindo seus programas.';
+
+cultura[94]='Categoria: Curiosidades<br>- Um bilhão de segundos equivale a 31,7 anos.';
+
+cultura[95]='Categoria: Pessoas<br>- 110.000 pessoas tinham mais de 100 anos em 2004.';
+
+cultura[96]='Categoria: Pessoas<br>- Em 1995, um japonês recitou, de memória, os 42.000 primeiros dígitos do número Pi (p) (3,14159…) em 9 horas.';
+
+cultura[97]='Categoria: Esportes estranhos<br>- O BOXADREZ É uma mistura de boxe e xadrez. Os lutadores se enfrentam por 4 minutos no tabuleiro, depois, os exadristas se enfrentam 2 minutos no ringue. Ganha quem nocautear ou der um xeque-mate no adversário.';
+
+cultura[98]='Categoria: Esportes Estranhos<br>- O PÓLO COM ELEFANTES Variação do pólo com cavalos, a versão com elefantes nasceu na virada do século 20, criada por aristocratas ingleses na Índia. Entre os dois pólos, só a bola é igual. Nos primórdios do esporte, tentaram a bola de futebol. Mas os elefantes brincavam de esmagar a pelota.';
+
+cultura[99]='Categoria: Esportes Estranhos<br>- O CORFEBOL Junção de handebol e basquete, é um dos poucos esportes coletivos mistos do mundo. Cada equipe tem quatro homens e quatro mulheres, divididos em casais que passam a bola até marcar a cesta. Homem só marca homem, mulher só marca mulher e não vale contato físico.';
+
+cultura[100]='Vaada chibur manda!!!!!!';
+
+function numero(){
+
+var numeros=200;
+
+while(numeros>99){
+
+numeros=Math.floor((Math.random())*100);
+
+}
+
+return numeros;
+
+}
+</script>
+
+<!-- alllll the styles -->
+<style>
+body {
+  overflow: hidden;
+  background-image: url(img/bgimg.png);
+  background-repeat: repeat;
+  
+}
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(img/status.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+@font-face {
+    font-family: 'cartoon';
+    src: url('font/cartoon.ttf') format('truetype');
+}
+body,td,th {
+  color: #FFF;
+  font-family: Verdana, Geneva, sans-serif;
+}
+a:link {
+  color: #FFF;
+}
+a:visited {
+  color: #FFF;
+}
+a:hover {
+  color: #0FF;
+}
+a:active {
+  color: #0FF;
+}
+.roundCorner{
+  -moz-border-radius: 15px;
+  border-radius: 15px;  
+}
+.menu_but{
+  font-size:200%
+}
+</style>
+
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<!-- content -->
+
+  <!-- log out button/old version/setting font-size -->
+    <script>
+    $(document).ready(function(){
+      $(".menu_but").css('font_size', $(window).height()*0.2);
+      //$("a.rss-item").attr('target', '_blank');
+      //$("a.rss-title").attr('target', '_blank');
+    });
+  </script>
+    <div style="position:absolute; z-index:10; font-family:cartoon">
+    <a href="../logout.php" target="_top" style=" font-size:x-large">Log Out...
+  </a>
+  </div>
+
+  <!-- Side Bar -->
+    <script>
+    $(document).ready(function(){
+      $("#sidebardiv").height("100%")
+      $("#sidebardiv").width(Wwidth*0.15);
+    });
+  </script>
+    <div id="sidebardiv" style="background-color:#009; position:absolute;left: 0px; top:0px; z-index:9">
+        
+    </div>
+    <div style="position:absolute; z-index:10; right:0; top:0; padding:5px"><a href="../index2.php">Versão antiga</a></div>
+    
+    <!-- Main Content -->
+    <script>
+    $(document).ready(function(){
+      //tudo isso é só pra centralizar o conteudo e o fundo não opaco.
+      contentWidth = Wwidth - $('#sidebardiv').width();
+      $("#maincontentdiv").width(Wwidth*0.65);
+      $("#maincontentdiv").height('100%');
+      blankspacecontent = (contentWidth - $("#maincontentdiv").width())/2
+      $("#maincontentdiv").css('left', $('#sidebardiv').width()+blankspacecontent);
+      $("#content").css('width',$("#maincontentdiv").width()*0.95);
+      $("#content").css('height',$("#maincontentdiv").height()*0.9);
+      $("#content").css('overflow-x','hidden');
+      differncea = ($("#maincontentdiv").height()-$("#content").height())/2;
+      $("#content").css('top',differncea);
+      differnceb = ($("#maincontentdiv").width()-$("#content").width())/2;
+      $("#content").css('left',differnceb);
+      $("#content").mCustomScrollbar();
+    });
+  </script>
+<div id="maincontentdiv" style="position:absolute; z-index:9; top:0" align="center">
+        <div id="content" style="z-index:10; position:absolute; overflow-x: hidden">
+          <div style="font-family:cartoon; font-size:60px">
+              Calendário
+            </div>
+<iframe src="https://www.google.com/calendar/embed?title=Superpack&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=2o0mtab4p7jjks0mg4ua85uphs%40group.calendar.google.com&amp;color=%232952A3&amp;src=90co4q7srl0ibeg4k45gkbqpsg%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=d8n6str5j11dupeikt06q7ftuk%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<br />
+            
+        </div>
+        <div style="background-color:#666; opacity:0.7; margin:0px; width:100%; height:100%; position:absolute; z-index:2"></div>
+       
+      </div>
+    
+    <!--Logo -->
+    <script>
+    $(document).ready(function(){
+      $("#logo").width((blankspacecontent+$('#sidebardiv').width())*0.9)
+      $("#logodiv").css("top",0.07*Wheight);
+      $("#logodiv").height($("#logo").height());
+      $("#doispontozero").css('font-size', $(window).height()*0.04);
+      $("#doispontozero").css('top', $(window).height()*(-0.04));
+      $("#doispontozero").css('left', $(window).width()*(0.01));
+    });
+  </script>
+<div id="logodiv" style="background-color: #006; position:absolute; padding:10px; left:0px; box-shadow: 10px 10px 5px #004; margin:0px; z-index:10" onmouseover="">
+            <img src="img/logo.png" id="logo"/>
+        </div>
+        
+    <!-- Menu -->
+    <script>
+  var m=0;  
+  $(document).ready(function(){
+    setTimeout(function(){
+        tamcerto = ($(window).height() - (parseFloat($('#logodiv').css('top'))) - ($('#logodiv').height()+20));
+        tamcerto = (parseFloat($('#logodiv').css('top'))) + ($('#logodiv').height()+20) + ((tamcerto*0.05));
+        m=new Menu(tamcerto,0);
+        //Criação de botões------------------------------------------------------
+        m.create_button("Calendário",function(){
+          $('#content').html('<div style="font-family:cartoon; font-size:60px">Calendário</div><iframe id="fiframe" src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=2o0mtab4p7jjks0mg4ua85uphs%40group.calendar.google.com&amp;color=%23BE6D00&amp;src=d8n6str5j11dupeikt06q7ftuk%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FSao_Paulo" style="border-width:0 " width="80%" height="600" frameborder="0" scrolling="no"></iframe><br /><br />');
+        });
+        m.create_button("Machberet Kvutzá",function(){
+          var win=window.open("../machberet", '_blank');
+            win.focus();
+        });
+        m.create_button("Armário da Tik",function(){
+          var win=window.open("../armario", "_blank");
+            win.focus();
+        });
+        
+        m.create_button("Tutoriais",function(){
+          $('#content').html('<div style="font-family:cartoon; font-size:60px">Tutoriais</div><iframe id="fiframe" src="../tutorial.php" style="border-width:0 " width="80%" height="600" frameborder="0" scrolling="no"></iframe><br /><br />');
+          //putInContent("http://www.chazit.org.br/superpack/tutorial.php", function(){
+            //var n,m;
+            //n = ajax_response.indexOf("<body>");
+            //m = ajax_response.indexOf("</body>");
+            //ajax_response = ajax_response.substring(n+6,m);
+            //$('#content').html(ajax_response);
+          //}
+        });
+        m.create_button("Katamari",function(){
+          if(confirm("Se você estiver fazendo algo de importante nessa página, é aconselhável que termine antes de começar o Katamari.\nVocê deseja continuar?")){
+            var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
+        }
+        //NOVO BOTAO
+
+        });
+        
+       
+                //fim da criação de botões-------------------------------------------------
+        m.show_buttons();
+      },1500);
+      
+  });  
+  </script>
+    
+    <!-- Cultura inutil -->
+    <script>
+    $(document).ready(function(){
+      culturastate=1;
+      $("#herzl").height(1);
+      contentWidth = Wwidth - $('#sidebardiv').width();
+      $("#cultura").width(contentWidth-60);
+      $("#cultcontent").html(cultura[numero()]);
+      $("#cultura").css('bottom', -40);
+      $("#cultura").css('left', $("#sidebardiv").width());
+      $("#cultura").click(function(){
+        if(culturastate==1){
+          $(this).animate({bottom: -$('#cultura').height()-40},500,"easeOutExpo");
+          culturastate=0;
+        }else{
+          $("#cultcontent").html(cultura[numero()]);
+          $(this).animate({bottom: -40},500,"easeOutExpo");
+          culturastate=1;
+        }
+      });
+      $("#herzl").height(parseFloat($("#cultura").css('height'))*1.6);
+    });
+  </script>
+    <div id="cultura" class="roundCorner" style="z-index:10; position:absolute; border:#FFF; padding:20px;
+    border: 10px #ffffff solid;background-color: #006;-webkit-border-top-left-radius: 30px;-moz-border-radius-topleft: 30px;border-top-left-radius: 30px;-webkit-border-top-right-radius: 30px;-moz-border-radius-topright: 30px;border-top-right-radius: 30px; cursor:pointer" align="center">
+    <img id="herzl" src="img/herzlpiadista.png" style="float:left; position:relative; top:-10px"/><div style="float:left; font-family:cartoon; font-size:xx-large">Cultura Inútil</div>
+    <div id="cultcontent"></div>
+    </div>
+    
+    <!-- rss feeds -->
+    <script>
+    rsswidth = 0;
+    var butrssright = 0;
+    var rss=0;
+    var lastpos=0;
+    $(document).ready(function(){
+      //$("#rss").mCustomScrollbar();
+      $("a.rss-title").prepend('<img src="img/rss.png" width="30" height="30"/>');
+      $("#rss").width(0);
+      $("#rss").height(Wheight*0.6);
+      $("#rss").css("top", 50);
+      $("#rss").css('right',-10);
+      $("#togglebutrss").height(Wheight*0.05);
+      butrssright= $('#rss').width()+50-((Wheight*0.05)/2);
+      $("#togglebutrss").css('right', 30);
+      $("#togglebutrss").css('top', parseFloat($("#rss").css('top'))-((Wheight*0.05)/2));
+      $("#rss").css('overflow', 'hidden');
+      $('.rss-box').hide();
+      $("#togglebutrss").click(rssToogle);
+      rsswidth = $("#rss").width();
+      butrssright = parseFloat($("#togglebutrss").css('right'));
+      $('#rss').mouseover(stopscroll);
+      $("#rss").mouseout(startscroll);
+    });
+    var scrolltimeint;
+    scrollTime=0;
+    scrolltop=$("#rss").scrollTop();
+    function scrolltimespan(){
+      scrollTime++;
+      $("#rss").scrollTop(lastpos+scrollTime);
+    }
+    function stopscroll(){
+      clearTimeout(scrolltimeint);
+      lastpos=$("#rss").scrollTop();  
+    }
+    function startscroll(){
+      scrollTime=0;
+      scrolltimeint = setInterval(scrolltimespan,50);
+    }
+    function rssToogle()
+    {
+      
+      if(rss==1)
+      {
+        $("#rss").animate({width: 0},1500,"easeOutExpo",function(){$(this).css('overflow', 'hidden');});
+        $("#togglebutrss").animate({right: 30},1500,"easeOutExpo");
+        $(".rss-box").hide(800);
+        rss=0;
+      }else
+      {
+        $("#rss").animate({width: Wwidth*0.2},1500,"easeOutExpo",function(){$(this).css('overflow', 'auto');});
+        $("#togglebutrss").animate({right: (Wwidth*0.2)+30},1500,"easeOutExpo");
+        $(".rss-box").show(200);        
+        rss=1;
+      }
+    }
+  </script>
+    <style>
+  /* begin styles for RSS Feed */
+
+.rss-box {
+   margin: 10px 5%;
+   padding: 4px 8px;
+}
+
+.rss-title, rss-title a {
+  font-family: "American Typewriter", "Trebuchet MS", Trebuchet, Lucida, sans-serif;
+  font-size: 18px;
+  font-weight:bold;
+  margin: 5px 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.rss-items {
+  
+}
+
+.rss-item  {
+  font-family: verdana, arial, sans-serif;
+  font-size: 13px;
+  font-weight : bold; 
+  margin: 8px 0;
+}
+
+.rss-item a:link, .rss-item a:visited, .rss-item a:active {
+  text-decoration: none;
+  font-weight:bold;
+  border-bottom: 1px solid #ededed;
+  color: #88b;
+  }
+
+.rss-item a:hover { 
+  text-decoration : none;
+  color: #0FF;
+  border-bottom: 1px dotted #e0861e;
+  }
+  
+.rss-date {
+  font-size: 11px;
+  font-weight : normal;
+  color: #F60;
+  }
+  </style>
+    <div id="rsscontainer">
+      <img id="togglebutrss" src="img/troca.png" style="z-index:11; position:absolute; cursor:pointer"/>
+       <div id="rss" class="roundCorner" style="z-index:10; position:absolute; border:#FFF; padding:20px;
+      border: 10px #ffffff solid;background-color: #006;-webkit-border-top-left-radius: 0px;-moz-border-radius-topleft: 0px;border-top-left-radius: 0px;-webkit-border-top-right-radius: 0px;-moz-border-radius-topright: 0px;border-top-right-radius: 0px; webkit-border-bottom-right-radius: 0px;-moz-border-radius-bottomright: 0px;border-bottom-right-radius: 0px; overflow:auto" align="left">
+      <div style="font-family:cartoon; font-size:36px">
+    Notícias
+      </div>
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Fwww.ynet.co.il%2FIntegration%2FStoryRss3082.xml&chan=y&num=5&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script><hr>
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Ffeeds.folha.uol.com.br%2Fmundo%2Frss091.xml&chan=y&num=5&desc=140&utf=y"  charset="UTF-8" type="text/javascript"></script><hr />
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FMiddleEast.xml&chan=y&num=5&desc=140&utf=y"  charset="UTF-8" type="text/javascript"></script><hr />
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Festadao.feedsportal.com%2Fc%2F33043%2Ff%2F534108%2Findex.rss&chan=y&num=5&desc=140&utf=y"  charset="UTF-8" type="text/javascript"></script><hr />
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Ffeeds.feedburner.com%2Fhaaretz%2FLBao%3Fformat%3Dxml&chan=y&num=5&desc=140&utf=y"  charset="UTF-8" type="text/javascript"></script><hr />
+      <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Fwww.jpost.com%2FRss%2FRssFeedsFrontPage.aspx&chan=y&num=5&desc=140&utf=y"  charset="UTF-8" type="text/javascript"></script>
+      </div>
+    </div>
+    
+<!-- End of Content -->
+
+<!-- Preloader -->/*N_Existia
+<script type="text/javascript">
+    //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow', function(){
+        m.show_buttons();
+      }); // will fade out the white DIV that covers the website.
+      $('body').delay(350).css({'overflow':'hidden'});
+      setTimeout(function(){
+        if(rss==0){
+          rssToogle();
+          scrolltimeint = setInterval(scrolltimespan,50);
+        }
+      },3000);
+        })
+    //]]>
+</script>
+*/
+
+</body>
+</html>
+
+

@@ -1,0 +1,314 @@
+<style>
+.tabelabusca {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+}.tabelabusca table{
+	width:100%;
+	margin:0px;padding:0px;
+}
+.tabelabusca tr:nth-child(odd){ background-color:#ffaa56; }
+.tabelabusca tr:nth-child(even)    { background-color:#ffffff; }
+.tabelabusca td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:14px;
+	font-size:19px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.tabelabusca tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.tabelabusca tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.tabelabusca tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}.tabelabusca tr:first-child td{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.divbusca{
+		background:-o-linear-gradient(bottom, #ff7f00 5%, #bf5f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #bf5f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #bf5f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#bf5f00");	background: -o-linear-gradient(top,#ff7f00,bf5f00);
+
+	background-color:#ff7f00;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:23px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+	padding: 7px;
+}
+.tabelabusca tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.tabelabusca tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.umpoucomais {
+	display:none;
+}
+
+</style>
+<div class="divbusca">
+	Buscar no A.M.: <input type="text" id="palavrachave"/><input type="button" value="Buscar" onclick="buscainterna();"/>
+</div>
+<script>
+nini=600;
+nfim=630;
+function prov1(){
+	$('#tamcerto').css("height", $('#busca').height() - $('.divbusca').height()*2);
+}
+prov1();
+
+function buscainterna(){
+	palavrachave = $("#palavrachave").val();
+	entrarAM(palavrachave,0,15);
+}
+
+function mostramais(e){
+e.next('.umpoucomais').slideToggle();	
+e.html("");
+}
+
+</script>
+<div id="tamcerto" style="overflow-y: auto; overflow-x:hidden;">
+<div class="tabelabusca">
+<table>
+<tr>
+ <td>Peulot de Sábado - página 42</td>
+</tr>
+    <tr><td><b>Tema:</b> Finalização do semestre<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -fechar mais um ciclo de chazit (nitzanim e chave beit)
+-refletir sobre o tema do semestre
+-ter um último momento com os chanichim que seja agradável, prazeroso e educativo<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: -gartic
+-linha do tempo: numa tela em branco no zoom, ir conduzindo os chanichim para que preencham coletivamente e com a nossa ajuda, a linha do tempo do nosso semestre, com cada peulá que tivemos
+-após discutir tudo isso e relembrar o tema e propósito de cada peulá, induzilos a pensar em um (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2030'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> finalização!<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: História da kvutza. Mostrar como é recompensador ser um educador da chazit.<br><b>Peulá dada para o shnat</b> 2016<br><b>Desenvolvimento</b>: Levar vídeos dos ex madrichim falando do primeiro contato com eles e o momento mais marcante da sua vida de chazit
+Depois, vão estar numa sala com vários balões no teto com o sonho dos Peilim; depois, soltaram os sonhos em balões de gás hélio(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=387'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> finalizacao<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: pilha, finalizacao, fazer com que eles relembrem as peulot do semestre, pilha machane, falar sobre a mudanca de kvutza e dos madrichim.<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: contexto: maquina do tempo. agente viu muita gente falando que nao se divertiu no semestre, entao resolvemos fazer uma maquina do tempo para ver se agnt se divertiu. em cada parte que agnt visitar, vai ter uma letra da chazit e um objeto sobre a peula. sichazinhas em cada peula: vcs lembram dessa pe(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=982'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Finalizacion<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que eles se divertam.
+Que nós consigamos deixar claro pros chanichim quais eram nossos objetivos Gerais do ano com eles.<br><b>Peulá dada para o shnat</b> 2014<br><b>Desenvolvimento</b>: Quebra-gelo:
+.Campeonato de quebra gelos!
+
+Desenvolvimento:
+.Os chanihcim serão divididos em grupos e com um quiz devem recuperrar as partes da "Peulá perdida da perdição".
+.Deverão sair correndo procurando os pedaços dependendo da pontuação no quiz, podendo pegar somente UMA por vez.
+(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=134'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> First Peulá<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Pilhar!
+tentar se conhecer - quem somos nós? quem queremos ser ao final desse processo?<br><b>Peulá dada para o shnat</b> 2019<br><b>Desenvolvimento</b>: Pilha de luz, para iluminar cada vez o horizonte!
+
+QG a decidir
+
+Cada chanich trouxe uma foto sua.
+1. mi ani? papeis com caracteristicas que eles tem que dar para alguem, esse alguem deve tirar uma selfie que expresse essa caracteristica
+2. correio elegante dirigido, com perguntas do que eles (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=776'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Fodase o corona, eu quero é machané<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -Contato com os chanichim
+- Lembrar da machanézinha legalll
+- Fazer com que não se desanimem com a chazit por conta do cancelamento da machané, pilhar eles e relembrar momentos de machané que a tornam especial
+
+<br><b>Peulá dada para o shnat</b> 2030<br><b>Desenvolvimento</b>: PILHAS DE MACHANÉ :
+
+Mala (escolher só 3 coisas pra colocar na sua mala de machané e mostrá-las)
+Onibus (qual seu hit da chazit preferido?)
+Sacanim (gel no cabelo, pintar a cara)
+Ataque (fazer bandeira, música’)
+Lanchinho machanístico
+Correio elegante
+Miss e mister (finalizacao)
+(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1989'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> folclore brasileiro<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: kos conhecam a cultura brasleira
+relacionar respeito com cultura/ respeitar culturas
+questionar se o folclore brasileiro está ameacado<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: O folclore está sendo ameacado pela cultura gringa.
+
+Será um sequestro do saci perere, ele é muito travesso e por isso vai ser sequestrado pelos gringos. Os outros personagens do folclore como Boitata, Curupira, Yara irão ajudá-lo. 
+
+Comecaremos a peulá dizendo que foi um sequestro. Eles d(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1240'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> FOOD TRUCK DA DIVERSÃO<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: SE DIVERTIR MUITOOOOO 
+INTERAGIR COM OUTRA KVUTZA (OMANIM)
+APLICAÇÃO DE CONCEITOS DA CHINUCH
+DIFERENTE MOLDE DE PEULA, EXPLORA A ATRAÇÃO DAS CRIANCAS, BRINCAR
+PODER ESCOLHER O QUE GOSTA DE FAZER NA PEULA- MULTIPLAS VONTADES
+
+<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: GUERRA DE FOOD TRUCKS:
+CONTEXTO: RATATOUIE 
+primiero vão rolar uns quebra gelos só pra gastar as energias, depois vamos falar que eles estão no mundo do ratatouie e agr o inspertor gatuni assumiu o comando e impediu q todos os ratos continuem no restaurante,por isso eles (ratos) devem se adapta(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1628'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> formação do estado de israel: aliot e movimentos<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: .que os chanichim tenham um dia foda
+Sualen. Foco na terceira alia, e no jantar. Mostrar lado dos hebreu, árabes e mandato britânico <br><b>Peulá dada para o shnat</b> 2018<br><b>Desenvolvimento</b>: .PEULA EXTERNA
+
+dividir os chanichim em três grupos: palestinos, judeus e ingleses. Vão ter objetivos/provas. O grupo que cumpre primeiro 5 provas ganha o direito de anular uma prova do outro grupo:
+A cada quatro provas cumpridas : palestinos podem anular uma de qualquer outro grupo, judeus pod(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=203'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Formação e Conscientização de Kvutza<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -que eles reconhecem a importância de cada um na formação do grupo
+-que eles comecem/continuem a se conhecer individualmente
+-qoc exercitem o trabalho em grupo e percebam como as coisas se facilitam/ficam melhoras ao estarem juntos e se ajudarem.
+-que eles se formem
+-que eles consigam lidar juntos com problemas e situações não agradáveis<br><b>Peulá dada para o shnat</b> 2026<br><b>Desenvolvimento</b>: QUEBRA GELO: jogo da peilada de se apresentar pro amiguinho que você não conversa tanto e depois apresentar ele pro resto do grupo.
+Quando começar a peula, eles serão super heróis. O poder deles é secreto por enquanto, mas falaremos que pra eles terem acesso a ele, eles terão que descobrir/c(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1026'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Formas de educação - Chazit X Escola<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - questionar a diferença entre Chazit e escola, e como cada uma educa;
+- questionar se existem diferentes formas de educar;
+- questionar se a Chazit ensina algo para eles; <br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: Pré sábado: pedir para os chanichim virem com o uniforme de escola
+ 
+QG: jogo da velha 
+
+"Nós como Chazit tivemos uma reunião com as principais escolas judaicas e não judaicas de São Paulo, e as diretoras falaram que os 5º estavam atrasados em relação às matérias. E como elas sabiam q(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1671'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> formas de expressão<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: mostrar que os chanichim não precisam guardar sentimentos dentro de si se querem se expressar, pois existem diferentes formas de se expressar além da mais popular que é a fala, mas também não precisam se expressar de alguma forma se não quiserem <br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: para chegar no pais da expressao diferente eles precisam passar pelo tabuleiro
+
+tabuleiro humano:
+-sorte ou azar
+-desafio
+-hora do show (todos começam a dançar com uma música)
+-hora do silencio (o grupo que falar perde)
+-casa da exceçåo
+
+- torta na cara:
+1- quantos irmaos a rafa tem?(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1372'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Formas de expressão e comunicação não violenta<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC entendam que existem várias formas de se expressar
+QOC entendam o que é comunicação não violenta
+QOC reflitam sobre como eles se comunicam com as pessoas a sua volta
+<br><b>Peulá dada para o shnat</b> 2032<br><b>Desenvolvimento</b>: NOME: Leve seu espírito/epirro/estiro para dar uma volta
+
+QG: Mímica complexa
+
+Dinâmica: 
+Estamos em um retiro espiritual, que dura 3 dias! Cada dia vocês vão passando por oficinas para aprender mais sobre vocês e o mundo!
+OFICINAS: 
+
+Dia 1:
+Prática esportiva: basquete de sabão; cor(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=2093'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> FORMAS DE MANIFESTAÇÃO<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional e Objetivos: observamos que na última peulá os chanichim se rebelaram de várias formas e em vários momentos, reclamando sobre os madrichim, a peulá, ausência de lanche, etc.
+
+Objetivos: Que os chanichim descubram diferentes formas de se expressarem, em vários lugares e reflitam sobre se eles se sentem ouvidos e levados a sério, além da importância de se organizar.
+
+<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: QUEBRA GELO:
+vão ter que fazer mímica para descobrir.
+deixar os lanches em um lugar
+DINÂMICA: fazemos um teatrinho sobre duas pessoas que querem fazer parte de um grupo, e outras duas não deixam.(fazer plaquinhas para os chanichim assumirem um lado, "oficina"; placas; tinta).Nisso, eles vão (...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1746'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> FRUTO DAS RAÍZES<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: •	Conhecer e integrar madrichim e chanichim.
+•	Incentivar o início da formação de grupo.
+•	Criação de vínculo de respeito e igualdade.
+•	Questionar quais são as nossas raízes e se elas se conectam entre si.
+•	Elas existem? São necessárias? Como se iniciam?
+<br><b>Peulá dada para o shnat</b> 2030<br><b>Desenvolvimento</b>: Quebra Gelo: Jogo porta-portão-porteira.
+Madrichim são enviados da Terra do Nunca e vieram para a Chazit chamar os chanichim para lá.
+Os chanichim terão um tempo para encontrar pela casa algum objeto com o qual se identificam. Após pegá-los, os chanichim os guardarão numa caixa que será ro(...)<br><b>Link: </b><a target='_blank' href='peula.php?id=1583'>Clique Aqui</a></span></sub></td></tr>
+</table>
+<table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,584,599)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',631,646)">Próxima página-></a></u></center>
+<tr>
+ <td>Peulot de Machané: - página 42</td>
+</tr>
+    <tr><td><b>Tema:</b> Diferentes linhas do judaismo<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -que os chanichim tenham uma base firme em relação as linhas judaicas
+-que entendam as difernças
+-que entendam que a chazit está aberta a todas as linhas<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: - Cada chanich tem uma bexiga com alguns papeis com frases e leis de cada linha.
+
+Provas:
+-jogo da cadeira (impedir que alguem sente com um beijo)- divir em 4 números
+- grupos- 4 representantes de cada grupo por vez- sumô de meia
+-base 4- 4 times, dois juntos por vez. 
+-atravessar a quadra e(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2146'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> diferentes linhas judaicas<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Que os chanichim entendam que o judaísmo vai além das 3 correntes básicas.Que os chanichim reflitam sobre qual é a correntes que eles seguem.<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Os chanichim serão separados em 5 grupos.
+eles estarão competindo por quem ganhará o um pedacinho das primeiras tabuas da lei.
+Os 5 tipos de judaísmo a serem tratados serão: Conservador, humanista, secular, ortodoxo e reformista. Cada grupo receberá um manual com suas ‘regras’:
+Ortodoxo(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=1830'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DIFERENTES MUNDOS EM ISRAEL <br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: -tratar as diferentes etnias que vivem em israel 
+-o que são beduínos e árabes (muçulmanos/ cristãos), drusos
+-mostrar que não só existem judeus em israel 
+-convivência com o diferente 
+<br><b>Peulá dada para o shnat</b> 2030<br><b>Desenvolvimento</b>: eles estão em guerra, pois todos querem a Terra sagrada. Para isso tem que destruir a história dos outros povos. 
+dividir em 4 grupos; Beduínos, Muçulmanos, Cristãos, Drusos
+daremos informações sobre cada um deles, eles deve escondê-las em bases e tentar roubar a dos outros grupos, jogo sk(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7107'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DIFERENTES TIPOS DE ESPIRITUALIDADE<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: racional: a maneira deles se comunicarem com o Deus que eles conhecem é muito restrita (apenas a reza)
+
+objetivo: QOC conheçam outra maneira de se comunicarem com ou sentirem a presença de Deus
+Ser um momento mais tranquilo e relaxante<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: Serão diferentes oficinas, das quais os chanichim escolhem qual ou quais querem participar
+
+- harkadot: Paps e Luiza Rizzi
+- Ioga: Lu Kanner
+- criação de musica: Matias e Samy
+- pintura e artes: Paula
+
+Primeiro vamos ter uma conversa sobre o tema, e depois dividir nas oficinas(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5366'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DIFERENTES TIPOS DE FAMILIA- FEITA<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: racional: eles tem contatos com diferentes tipos de familia, porem ainda tem a ideia de que so a ´´familia tradicional´´ que é a certa
+
+objetivos: 
+-qoc reflitam se há um jeito certo de familia
+-qoc conhecam mais tipos de familia
+<br><b>Peulá dada para o shnat</b> 2028<br><b>Desenvolvimento</b>: detetive- roubo da lancheira. pistas que levam até as pessoas
+
+ARVORE:  duas mulheres casadas( o pai de uma mora com elas). elas tem uma filha e um filho. essa filha, mais velha, é separada.
+
+mulher1- acha que eh a pessoa que eh casada, essa pessoa tem mta inveja da lancheira 
+mulher2- quem r(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=4899'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Diferentes tipos de mundo(realidades e desigualdades)<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional: Por eles serem crianças de classe média/média alta eles acabam não sabendo as desiguldades sociais e economicas e nem as diferenças existente e isso já causa e pode causar muitos problemas para os chanichim.
+
+
+Objetivo: Que eles compreendam que o mundo está lotado de desigualdades e injustiças e que nem todo mundo tem privilégios que eles tem.
+Se eles sabem o que é o conceito de justiça social, e mostrar a definição da chazit
+para eles pensarem em soluções para diminuire as desigualdades e injustiças(coisas grandes ou dentro do alcance dele propor as duas) 
+<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: Quebra Gelo:  Alerta(isa explica)
+
+Dinamica:
+Chanichim serão divididos em três grupos que representarão três jovens de classes sociais diferentes(jovem negros da periferia,  um jovem de classe média, e um jovem rico privilegiado) e cada um terá um objetivo no "jogo da vida")
+
+-objetivo jo(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=3870'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dilemas<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - QOCM reflitam sobre as possíveis soluções para dilemas da vida 
+- pensar sobre o que é e o que define um dilema
+- entender que dilemas estão presentes no nosso dia à dia 
+- pensar que constantemente lidamos com a necessidade de decisões  
+<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: Quebra gelo: alibaba e os 40 ladrões
+
+Dinâmica: canibal 
+
+eles sao o aladdin e precisam de ajuda para conseguir a a lampada do genio (QUE SERA O MENTOS COM COCA)(OBRIGADO MENACHE) e vao passando nas bases que terao DILEMAS
+
+DILEMAS:
+1- tirar UM dedo do meio da mao ou os Dois dedoes do pe?
+(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7228'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DILEMAS ÉTICOS DA SHOÁ<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim discutam sobre os dilemas da shoa e tenham uma opinião sobre os problemas enfrentados pelas pessoas<br><b>Peulá dada para o shnat</b> 2020<br><b>Desenvolvimento</b>: DILEMAS
+-	Ianuz korkzat→ ele pode escapar e deixar as crianças ou não escapa e fica com elas até o final?
+-	Gueto de Lodz( gueto produtivo, todos trabalhavam)→ juden rat( governo judaico que era controlado pelos nazistas. A deportação era feita pelo juden rat( ele escolhia quem ia para os(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2531'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dilemas da historia de israel<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Racional:  Vimos nesse semestre que eles se sentem distantes de Israel em questão de como agir e trazer a mudança em relação a isso. Porém, gostam muito de conversar sobre esse assunto, uma vez que é de extrema importância ter propriedade da historia do povo judeu, principalmente depois do 7 de outubro.
+
+Objetivos:
+- Compreenderem os dilemas da história de Israel;
+- Engajar os chanichim a tomarem as decisões;
+- Entender a complexidade desses dilemas;
+- Descobrir os dilemas que fundamentaram a criação e manutenção do Estado de Israel;
+- Refletir sobre as consequências de ações perante outros e a história.<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: Dinâmica:
+QG: Troca ou bang
+
+Vamos dividir eles em 5 ou 6 grupos e cada um deles vai receber alguma situação da história de Israel em que seja necessário fazer uma escolha (dilema). Eles terão que se capacitar a respeito daquela situação e fazer um teatro para os outros grupos através de(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=10395'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> DILEMAS ETICOS DA TECNOLOGIA<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: questiona os chanichim  até que ponto a tecnologia pode ir, quais são seus limites.
+<br><b>Peulá dada para o shnat</b> 2024<br><b>Desenvolvimento</b>: - clones 
+- escolhe se o bb mulher ou homem
+-vacina pra viver mais 
+- maquinas roubando lugar de pessoas 
+
+SOMOS MEDICOS E OS CHANICHIM QUEREM TER FILHOS, E NÓS VAMOS VENDER OS FILHOS P ELES. 
+VAMOS VENDER COR 
+QUALIDADE ( 4 TOPPINS) 
+IDADE QUE ELES QUISEREM 
+TIPO DE CABELO
+ALTURA
+PESO (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6478'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dilemas na vida<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: que os chanichim se questionem sobre sua liberdade de escolha. <br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>: Quebra gelo: sababa ou ló iafé
+
+peula: tabuleiro. 3 geupos. tipo jogo da vida
+
+40 casas:
+10 nada
+25 dilemas/provas
+
+1- um político corrupto foi flagrado. vocês mandam ele à prisão e ficam na mesma casa, ou avançam duas casas?
+2- você encontrou um cachorro abandonado. para salvá-lo (...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=2913'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dinâmica da ilha<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: - Qoc interajam entre si e não só com seus amigos mais próximos
+- Qoc percebam que pessoas podem ter características complementares e nem por isso serem melhores amigas<br><b>Peulá dada para o shnat</b> 2027<br><b>Desenvolvimento</b>: ~ nós com avental de cientistas ~
+
+"Não sei se vocês sabem, mas na frente de vocês estão alguns dos cientistas mais renomados do Brasil. Analisamos o semestre que a gente teve, os perfis de cada um de vocês que foram enviados pelos seus pais e depois de muitas pesquisas, chegamos a uma concl(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=6343'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dinâmica dos animais com relações biologicas<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: Utilizar a analogia das relações da natureza para fazê-los refletirem sobre o papel que cada um exerce no grupo, como cada um se enxerga e enxerga o outro.<br><b>Peulá dada para o shnat</b> 2029<br><b>Desenvolvimento</b>: DINÂMICA:
+Eles serão pesquisadores biólogos, que estão partindo para uma missão na floresta para desvendar os mistérios da natureza e as relações entre os animais, para restaurar a harmonia entre todos eles. Para isso se infiltrarão no ecossistema de cada um e reproduzirão as práticas de(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7064'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> Dinheiro<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: QOC pensem como o dinheiro esta presente e faz parte da vida deles e questionar o quanto ele é capaz de controlar<br><b>Peulá dada para o shnat</b> 2023<br><b>Desenvolvimento</b>: Bem vindos ao templo da sujeira!! 
+Madrichim são anjos da sujeira e vieram passar a diante a palavra do senhor sujão
+Chanichim serao dividids em dois paises que deverao lutar para ver quem eh mais merecedor da religião sujista.
+primeira parte sera conquistar os terrenos para isso chanichim dev(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=5707'>Clique Aqui</a></span></sub></td></tr><tr><td><b>Tema:</b> dinossauros<br><a style='cursor:pointer' onclick='mostramais($(this))'><u>Ver Mais...</u></a><span class='umpoucomais'><b>Objetivo</b>: a sua imaginação é limitada por problemas reais?
+trabalhar inseguranças e seguranças naquilo que você sabe que manda bem.
+a importância de ir além.
+trabalhar as limitações. quais são?<br><b>Peulá dada para o shnat</b> 2022<br><b>Desenvolvimento</b>:  Várias garrafas aparecerão enterradas pelo sítio, que foram enviadas por um astronauta solitário, elas conterão os nomes dos chanichim e uma ficha para eles preencherem suas características
+ A brisa é que o astronauta chegou na conclusão de que a vida na terra não fazia mais sentido, e qu(...)<br><b>Link: </b><a target='_blank' href='peulamachane.php?id=7631'>Clique Aqui</a></span></sub></td></tr>
+    </table>
+<center>
+<u><a style="cursor:pointer; font-size:20px; margin-right:6px;" onclick="entrarAM(0,584,599)"><-Voltar página</a></u><u>
+<a style="cursor:pointer; font-size:20px" onclick="entrarAM('0',631,646)">Próxima página-></a></u></center>
+</div>
+</div>

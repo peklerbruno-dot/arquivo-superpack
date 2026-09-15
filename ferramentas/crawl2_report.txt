@@ -1,0 +1,15 @@
+200	658	http://www.chazit.org.br/chatamizade/
+302	20632	http://www.chazit.org.br/chatamizade/mensagens.php
+404	1024	http://www.chazit.org.br/acervomagico/
+404	1024	http://www.chazit.org.br/acervomagico/index2.php
+200	3129	http://www.chazit.org.br/perfil/
+302	1351	http://www.chazit.org.br/perfil/atencao.php
+404	1024	http://www.chazit.org.br/documentos/
+404	1024	http://www.chazit.org.br/atas/
+404	1024	http://www.chazit.org.br/acervofla/
+200	336	http://www.chazit.org.br/secretgame/
+302	2205	http://www.chazit.org.br/upload2.php
+200	658	http://www.chazit.org.br/chatamizade/index.php
+200	677	http://www.chazit.org.br/perfil/pail.php
+
+FALHAS
